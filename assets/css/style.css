@@ -1,0 +1,211 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #ff6600;
+}
+
+/* Header / Navbar */
+header {
+  position: relative;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff6600;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: url("../images/hero-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.btn-custom {
+  background: #ff6600;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.btn-custom:hover {
+  background: #e65c00;
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  border-bottom: 1px solid #eee;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Swiper */
+/* - Swiper Container & Slides */
+.swiper {
+  position: relative; /* important for positioning arrows */
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* - Swiper Custom Arrows (Fixed) */
+.icon-arrow {
+  position: absolute;
+  bottom: 20px;              /* place at bottom of carousel */
+  top: auto;                 /* reset */
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 8;
+  opacity: 0.9;
+  transition: all 0.3s ease-out;
+}
+
+.icon-arrow:hover {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.icon-arrow.icon-arrow-left {
+  left: 20px;
+}
+
+.icon-arrow.icon-arrow-right {
+  right: 20px;
+}
+
+/* Hide arrows on smaller screens */
+@media (max-width: 991px) {
+  .icon-arrow.icon-arrow-left,
+  .icon-arrow.icon-arrow-right {
+    display: none;
+  }
+  .swiper-pagination {
+    position: relative;
+  }
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+  background: #333;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #000;
+}

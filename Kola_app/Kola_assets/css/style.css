@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap'); /* Global Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tourney- {
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings: "wdth" 100
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav img {
+    width: 100px;
+    align-items: center;
+}
+
+.nav span {
+    font-size: 32px;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.right ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.right ul li {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.right ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.logoIcons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoIcons img {
+    margin-left: 10px;
+    cursor: pointer;
+    width: 25px;
+}
+
+/*---------------------------------------
+  HERO
+-----------------------------------------*/
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  height: calc(100vh - 51px);
+}
+
+.hero-section small {
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.hero-section .section-overlay {
+  z-index: 2;
+  opacity: 0.45;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.hero-section .container .row {
+  height: 100%;
+}
+
+.main-banner.h4 {
+    font-size: small;
+}
+
+
+  .product-content h5 a {
+    color: #000;             /* Make text black */
+    text-decoration: none;   /* Remove underline */
+    font-weight: 600;        /* Make it bold for clarity */
+  }
+
+  .product-content h5 a:hover {
+    color: #555;             /* Slightly lighter black/gray on hover */
+  }
+

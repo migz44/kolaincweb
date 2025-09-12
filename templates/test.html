@@ -1,0 +1,38 @@
+        # Send styled HTML email with QR code
+        email_subject = "🎉 Your Ticket for WeWannaParty 🎉"
+        email_body = f"""
+               <div style="font-family: Arial, sans-serif; text-align: center; padding: 20px;">
+                   <!-- Logo -->
+                   <img src="https://yourdomain.com/static/images/KolaIncLogo.png" alt="Company Logo" style="max-width: 120px; margin-bottom: 20px;">
+
+                   <!-- Congrats -->
+                   <h2 style="color: #28a745;">🎉 Congratulations {full_name}! 🎉</h2>
+                   <p>Thank you for purchasing your ticket. Below are your details:</p>
+
+                   <!-- Ticket Info -->
+                   <div style="text-align: left; max-width: 400px; margin: 0 auto; padding: 15px; border: 1px solid #ddd; border-radius: 10px;">
+                       <p><strong>🎟 Ticket Type:</strong> {ticket.ticket_type} (KES {ticket.ticket_price})</p>
+                       <p><strong>🧾 Number of Tickets:</strong> {ticket.number_of_tickets}</p>
+                       <p><strong>💰 Total Paid:</strong> KES {ticket.total_price}</p>
+                   </div>
+
+                   <!-- QR Code -->
+                   <div style="margin-top: 20px;">
+                       <p>📲 Show this QR code at the gate for entry ✅</p>
+                   </div>
+               </div>
+               """
+
+        email_message = EmailMultiAlternatives(
+            email_subject,
+            "Please view this email in HTML format to see your ticket details.",  # Fallback text
+            settings.EMAIL_HOST_USER,
+            [email],
+        )
+        email_message.attach_alternative(email_body, "text/html")
+        email_message.attach_file(ticket.qr_code.path)  # attach QR code image
+        email_message.send(fail_silently=False)
+
+        return redirect('ticket-success', ticket_id=ticket.id)
+
+    return render(request, 'TicketForm.html')

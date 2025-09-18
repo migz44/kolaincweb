@@ -1,38 +1,256 @@
-        # Send styled HTML email with QR code
-        email_subject = "🎉 Your Ticket for WeWannaParty 🎉"
-        email_body = f"""
-               <div style="font-family: Arial, sans-serif; text-align: center; padding: 20px;">
-                   <!-- Logo -->
-                   <img src="https://yourdomain.com/static/images/KolaIncLogo.png" alt="Company Logo" style="max-width: 120px; margin-bottom: 20px;">
+def is_staff_user(user):
+    return user.is_staff
 
-                   <!-- Congrats -->
-                   <h2 style="color: #28a745;">🎉 Congratulations {full_name}! 🎉</h2>
-                   <p>Thank you for purchasing your ticket. Below are your details:</p>
 
-                   <!-- Ticket Info -->
-                   <div style="text-align: left; max-width: 400px; margin: 0 auto; padding: 15px; border: 1px solid #ddd; border-radius: 10px;">
-                       <p><strong>🎟 Ticket Type:</strong> {ticket.ticket_type} (KES {ticket.ticket_price})</p>
-                       <p><strong>🧾 Number of Tickets:</strong> {ticket.number_of_tickets}</p>
-                       <p><strong>💰 Total Paid:</strong> KES {ticket.total_price}</p>
-                   </div>
+@login_required
+@user_passes_test(is_staff_user)
+def Scanner(request):
+    return render(request, 'Scanner.html')
 
-                   <!-- QR Code -->
-                   <div style="margin-top: 20px;">
-                       <p>📲 Show this QR code at the gate for entry ✅</p>
-                   </div>
-               </div>
-               """
 
-        email_message = EmailMultiAlternatives(
-            email_subject,
-            "Please view this email in HTML format to see your ticket details.",  # Fallback text
-            settings.EMAIL_HOST_USER,
-            [email],
-        )
-        email_message.attach_alternative(email_body, "text/html")
-        email_message.attach_file(ticket.qr_code.path)  # attach QR code image
-        email_message.send(fail_silently=False)
+@require_http_methods(["GET"])
+def verify_ticket(request, ticket_id):
+    """User endpoint: GET this URL to check if a ticket is valid (without marking it used)."""
+    try:
+        ticket = Ticket.objects.get(id=ticket_id)
+        if ticket.is_used:
+            return JsonResponse({"status": "checked", "message": "ℹ️ This ticket has already been used."})
+        else:
+            return JsonResponse({"status": "checked", "message": "✅ This ticket is valid and has not been used yet."})
+    except Ticket.DoesNotExist:
+        return JsonResponse({"status": "error", "message": "❌ Invalid Ticket!"})
 
-        return redirect('ticket-success', ticket_id=ticket.id)
 
-    return render(request, 'TicketForm.html')
+@require_http_methods(["GET"])
+def verify_ticket_code(request, code):
+    """User endpoint: GET this URL to check a ticket by code (without marking it used)."""
+    try:
+        ticket = Ticket.objects.get(unique_code=code)
+        if ticket.is_used:
+            return JsonResponse({"status": "checked", "message": "ℹ️ This ticket has already been used."})
+        else:
+            return JsonResponse({"status": "checked", "message": "✅ This ticket is valid and has not been used yet."})
+    except Ticket.DoesNotExist:
+        return JsonResponse({"status": "error", "message": "❌ Invalid Ticket Code!"})
+
+
+@require_http_methods(["POST"])
+def scan_ticket(request, ticket_id):
+    try:
+        ticket = Ticket.objects.get(id=ticket_id)
+    except Ticket.DoesNotExist:
+        return JsonResponse({"status": "error", "message": "❌ Invalid Ticket!"})
+
+    with transaction.atomic():
+        updated_count = Ticket.objects.filter(
+            id=ticket_id, is_used=False
+        ).update(is_used=True)
+
+        if updated_count == 0:
+            TicketScan.objects.create(
+                ticket=ticket,
+                status="failed",
+                scanned_by="Scanner",
+                event=ticket.event
+            )
+            return JsonResponse({"status": "error", "message": "❌ Ticket already used!"})
+        else:
+            TicketScan.objects.create(
+                ticket=ticket,
+                status="success",
+                scanned_by="Scanner",
+                event=ticket.event
+            )
+            return JsonResponse({
+                "status": "success",
+                "message": f"✅ Ticket valid for {ticket.full_name} ({ticket.ticket_type.name}) - {ticket.event.name}"
+            })
+
+
+@require_http_methods(["POST"])
+def scan_ticket_code(request, code):
+    """Scanner endpoint: POST to this URL to mark a ticket as used by its code."""
+    try:
+        ticket = Ticket.objects.get(unique_code=code)
+    except Ticket.DoesNotExist:
+        return JsonResponse({"status": "error", "message": "❌ Invalid Ticket Code!"})
+
+    with transaction.atomic():
+        updated_count = Ticket.objects.filter(
+            unique_code=code, is_used=False
+        ).update(is_used=True)
+
+        if updated_count == 0:
+            TicketScan.objects.create(ticket=ticket, status="failed", scanned_by="Scanner")
+            return JsonResponse({"status": "error", "message": "❌ Ticket already used!"})
+        else:
+            TicketScan.objects.create(ticket=ticket, status="success", scanned_by="Scanner")
+            return JsonResponse(
+                {"status": "success", "message": f"✅ Ticket valid for {ticket.full_name} ({ticket.ticket_type.name})"})
+
+
+def ticket_success(request, ticket_id):
+    try:
+        ticket = Ticket.objects.get(id=ticket_id)
+    except Ticket.DoesNotExist:
+        raise Http404("Ticket not found")
+
+    count = request.GET.get('count')
+    try:
+        count = int(count) if count else ticket.number_of_tickets
+    except Exception:
+        count = ticket.number_of_tickets
+
+    return render(request, 'ticket_success.html', {'ticket': ticket, 'purchased_count': count})
+
+
+@api_view(['POST'])
+def handleMpesaResponse(request):
+    json_data = request.data
+    print(json_data)
+    result_code = json_data['Body']['stkCallback']['ResultCode']
+    merchardId = json_data['Body']['stkCallback']['MerchantRequestID']
+    checkoutId = json_data['Body']['stkCallback']['CheckoutRequestID']
+    payment = Payment.objects.get(merchardId=merchardId, checkoutId=checkoutId)
+
+    if result_code == 0:
+        print("Success")
+        array_data = json_data['Body']['stkCallback']['CallbackMetadata']['Item']
+        for data in array_data:
+            if data['Name'] == 'Amount':
+                amount = data['Value']
+            if data['Name'] == 'MpesaReceiptNumber':
+                receipt_number = data['Value']
+            if data['Name'] == 'Balance':
+                balance = data['Value']
+            if data['Name'] == 'TransactionDate':
+                transaction_date = data['Value']
+            if data['Name'] == 'PhoneNumber':
+                phone_number = data['Value']
+        payment.MpesaReceiptNumber = receipt_number
+        payment.MpesaAmount = amount
+        payment.MpesaPhoneNumber = phone_number
+        payment.isSuccessful = True
+        payment.save()
+    else:
+        print("Failure")
+    return JsonResponse({'success': 'Received'})
+
+
+@login_required
+@user_passes_test(lambda u: u.is_staff)
+def admin_dashboard(request, event_slug=None):
+    # If no event specified, show overview of all events
+    if not event_slug:
+        return event_overview(request)
+
+    event = get_object_or_404(Event, slug=event_slug)
+
+    # Filter all statistics by event
+    today = timezone.now().date()
+
+    # Ticket statistics for this event
+    event_tickets = event.tickets.all()
+    total_tickets = event_tickets.count()
+    used_tickets = event_tickets.filter(is_used=True).count()
+    unused_tickets = total_tickets - used_tickets
+    tickets_today = event_tickets.filter(created_at__date=today).count()
+
+    # Revenue for this event
+    total_revenue = event_tickets.aggregate(total=Sum('total_price'))['total'] or 0
+    today_revenue = event_tickets.filter(created_at__date=today).aggregate(total=Sum('total_price'))['total'] or 0
+    avg_ticket_price = event_tickets.aggregate(avg=Avg('ticket_price'))['avg'] or 0
+
+    # Scan statistics for this event
+    event_scans = event.scans.all()
+    total_scans = event_scans.count()
+    successful_scans = event_scans.filter(status='success').count()
+    failed_scans = total_scans - successful_scans
+    scan_success_rate = (successful_scans / total_scans * 100) if total_scans > 0 else 0
+
+    today_scans = event_scans.filter(scanned_at__date=today).count()
+    successful_today = event_scans.filter(status='success', scanned_at__date=today).count()
+
+    # Ticket type distribution for this event
+    ticket_type_stats = event.ticket_types.annotate(
+        count=Count('tickets'),
+        revenue=Sum('tickets__total_price')
+    ).order_by('-revenue')
+
+    context = {
+        'event': event,
+        'total_tickets': total_tickets,
+        'used_tickets': used_tickets,
+        'unused_tickets': unused_tickets,
+        'tickets_today': tickets_today,
+        'total_revenue': total_revenue,
+        'today_revenue': today_revenue,
+        'avg_ticket_price': avg_ticket_price,
+        'total_scans': total_scans,
+        'successful_scans': successful_scans,
+        'failed_scans': failed_scans,
+        'scan_success_rate': round(scan_success_rate, 1),
+        'today_scans': today_scans,
+        'successful_today': successful_today,
+        'ticket_type_stats': ticket_type_stats,
+        'today': today.strftime('%B %d, %Y'),
+        'current_time': timezone.now().strftime('%H:%M:%S'),
+    }
+
+    return render(request, 'admin_dashboard.html', context)
+
+
+def event_overview(request):
+    """Show overview of all events"""
+    events = Event.objects.filter(is_active=True)
+
+    events_data = []
+    for event in events:
+        events_data.append({
+            'name': event.name,
+            'slug': event.slug,
+            'total_tickets': event.tickets.count(),
+            'used_tickets': event.tickets.filter(is_used=True).count(),
+            'total_revenue': event.tickets.aggregate(total=Sum('total_price'))['total'] or 0,
+            'total_scans': event.scans.count(),
+            'successful_scans': event.scans.filter(status='success').count(),
+        })
+
+    context = {
+        'events_data': events_data,
+        'today': timezone.now().date().strftime('%B %d, %Y'),
+    }
+
+    return render(request, 'event_overview.html', context)
+
+
+def scan_stream(request):
+    def event_stream():
+        last_id = TicketScan.objects.order_by('-id').first().id if TicketScan.objects.exists() else 0
+
+        while True:
+            # Check for new scans
+            new_scans = TicketScan.objects.filter(id__gt=last_id).select_related('ticket')
+
+            for scan in new_scans:
+                last_id = scan.id
+                data = {
+                    'status': scan.status,
+                    'full_name': scan.ticket.full_name,
+                    'ticket_type': scan.ticket.ticket_type.name,
+                    'scanned_at': scan.scanned_at.isoformat()
+                }
+                yield f"data: {json.dumps(data)}\n\n"
+
+            time.sleep(1)  # Check every second
+
+    response = StreamingHttpResponse(event_stream(), content_type='text/event-stream')
+    response['Cache-Control'] = 'no-cache'
+    response['Connection'] = 'keep-alive'
+    return response
+
+
+@login_required
+@user_passes_test(is_staff_user)
+def live_scans(request):
+    return render(request, 'live_scans.html')

@@ -9,7 +9,7 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="db" uuid="7da3fbec-20c3-45fd-b3cb-3c1e73fb34a1">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>d49de51c-f3ac-4c42-8ccf-f8465c8d5e8b</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\Owner\PycharmProjects\KOLA_INC\db.sqlite3</jdbc-url>

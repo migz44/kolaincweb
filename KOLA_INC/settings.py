@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,16 +26,11 @@ SECRET_KEY = 'django-insecure-#pimqk*jzhzi&j=mbsj)%%5xx#^b^)gb!+s(tcdjik&ues=gej
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "192.168.100.39",
-    ".ngrok-free.app",
+'*'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.ngrok-free.app",
-    "http://127.0.0.1:7000",
-    "http://localhost:7000",
+  'https://*.kolainc.com',
 ]
 
 
@@ -89,6 +84,18 @@ WSGI_APPLICATION = 'KOLA_INC.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.getenv('DB_NAME', 'kolaincDB'),
+#         'USER': os.getenv('DB_USER', 'kolaincUser'),
+#         'PASSWORD': os.getenv('DB_PASSWORD', 'alokcni'),
+#         'HOST': os.getenv('DB_HOST', 'localhost'),
+#         'PORT': os.getenv('DB_PORT', '3306'),
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -99,6 +106,11 @@ DATABASES = {
         'NAME': 'kolaapp',
     }
 }
+
+
+
+
+
 
 
 # Password validation
@@ -203,3 +215,11 @@ MPESA_INITIATOR_USERNAME = 'initiator_username'
 # Plaintext password for initiator (to be used in B2C, B2B, AccountBalance and TransactionStatusQuery Transactions)
 
 MPESA_INITIATOR_SECURITY_CREDENTIAL = 'initiator_security_credential'
+
+
+# settings.py
+
+# Redirect users to login page if they try to access a protected page
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/admin-dashboard/'  # Or wherever your dashboard is
+LOGOUT_REDIRECT_URL = '/login/'  # Where users go after logging out

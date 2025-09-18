@@ -4,456 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/KolaIncWeb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/libcrypto-3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/python.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/python3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/python313.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/pythonw.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/vcruntime140.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/vcruntime140_1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/pyvenv.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/flex-slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/lightbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/owl-carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/swiper-bundle.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/templatemo-hexashop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/css/vendor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/Flaticon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/bootstrap-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/bootstrap-icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/flexslider-icon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/flexslider-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/flexslider-icon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/flexslider-icon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/slick.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/slick.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/slick.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/slick.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/AboutPhoto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImageAccessories.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImageAccessories_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImageMen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImageWomen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImage_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/KOLACOPIA2.0TICKET.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/KOLACOPIATICKET.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/KolaIncLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Kolacopia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Logo_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/MainBannerPic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/MainBanner_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Men/Men_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Men/Men_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Men/Men_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NEWKOLAFOOTER_1-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NEWKOLAFOOTER_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NEWKOLALOGO_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NEWYEARCONCERTTICKET (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NewKolaLogo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/PROJECTKOLATICKET.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/PosterKolacopia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/PosterKolacopia_2.0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/ProjectKola (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/ShoppingBag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/WeAreKola.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/WeAreKolaMain.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/WeAreKola_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/about-left-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/about-us-page-heading.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/abstral-official-bdlMO9z5yco-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/arct-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/DjKhaviza.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/DjZanela.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/Dj_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/baner-right-image-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/baner-right-image-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/bg-newsletter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-large-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-large-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-large-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-sm-item.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-sm-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-sm-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/collection-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/dhl-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/edward-unsplash-blur.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/explore-image-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/explore-image-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/for_accecories.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/for_accessories.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/for_women.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/joecalih-UmTZqmMvQcw-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/kawkee_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/kid-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/kid-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/kid-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/light-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/main-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/master-card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/men-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/men-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/men-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/mpesa-logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/nainoa-shizuru-unsplash-blur.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/newsletter-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/nicholas-green-unsplash-blur.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/pattern-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/paypal-card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/pexels-alexander-suhorucov-6457579.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/pinterest_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-large-image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-large-image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-large-image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-large-image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-small-image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-small-image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-small-image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/products-page-heading.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/service-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/service-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/service-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/shopify_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/single-image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/single-product-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/single-product-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/soundtrap-rAT6FJ6wltE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/team-member-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/team-member-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/team-member-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/text-pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/tiktok_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/video-image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/video-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/visa-card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/whatsapp_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/white-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/wishlist-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/wishlist-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/wishlist-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/women-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/women-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/women-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/SmoothScroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/accordions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/click-scroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/imgfix.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/isotope.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/jquery-2.1.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/jquery.counterup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/jquery.sticky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/lightbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/modernizr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/owl-carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/quantity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/script.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/scrollreveal.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/slick.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/js/waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/videos/pexels-2022395.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/flex-slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/lightbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/owl-carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/swiper-bundle.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/templatemo-hexashop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/vendor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Flaticon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/bootstrap-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/bootstrap-icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/flexslider-icon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/flexslider-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/flexslider-icon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/flexslider-icon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/slick.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/slick.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/slick.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/slick.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ShoppingBag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/WeAreKola.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/about-left-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/about-us-page-heading.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/abstral-official-bdlMO9z5yco-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/arct-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/baner-right-image-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/baner-right-image-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/baner-right-image-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/baner-right-image-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banner-image-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banner-image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banner-image-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banner-image-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banner-image-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banner-image-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/bg-newsletter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-large-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-large-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-large-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-sm-item.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-sm-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/cat-sm-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/collection-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/dhl-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/edward-unsplash-blur.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/explore-image-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/explore-image-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/for_accecories.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/for_accessories.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/for_women.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/front_face_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/front_face_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/front_face_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/front_face_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/front_face_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/front_face_6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/insta-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/insta-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/insta-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/insta-item4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/insta-item5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/insta-item6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/instagram-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/instagram-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/instagram-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/instagram-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/instagram-05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/instagram-06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/instagram_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/joecalih-UmTZqmMvQcw-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/kawkee_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/kid-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/kid-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/kid-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/left-banner-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/light-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/main-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/master-card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/men-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/men-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/men-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/nainoa-shizuru-unsplash-blur.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/newsletter-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/nicholas-green-unsplash-blur.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pattern-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/paypal-card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pexels-alexander-suhorucov-6457579.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pinterest_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-image9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-large-image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-large-image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-large-image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-large-image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-small-image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-small-image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/post-small-image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/product-item-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/products-page-heading.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/service-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/service-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/service-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/shopify_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/single-image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/single-product-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/single-product-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/soundtrap-rAT6FJ6wltE-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/team-member-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/team-member-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/team-member-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/text-pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/tiktok_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/video-image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/video-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/visa-card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/whatsapp_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/white-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/wishlist-item1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/wishlist-item2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/wishlist-item3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/women-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/women-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/women-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/SmoothScroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/accordions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/click-scroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/imgfix.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/isotope.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/jquery-2.1.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/jquery.counterup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/jquery.sticky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/lightbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/modernizr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/owl-carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/quantity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/script.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/scrollreveal.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/slick.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/videos/pexels-2022395.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/AllTickets.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/BuyMerchandise.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ContactUs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Kolacopia.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Kolacopia2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Master.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/OurGallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ProjectKola.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Scanner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ShopMen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ShopWomen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/TicketForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/TicketStop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ticket_success.html" afterDir="false" />
+    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (1)">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/sounds/ScannerAlertFail.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/sounds/ScannerBeepSuccess.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kola_app/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/admin-dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/scanner/Scanner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/scanner/live_scans.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/KolaIncWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KolaIncWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KOLA_INC/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0002_ticket_unique_code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0003_delete_purchase_ticketscan_scanned_by_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0004_event_ticketbooking_ticket_event_tickettype_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0005_alter_ticket_ticket_type_remove_ticket_is_used_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0006_remove_ticket_event_delete_ticketbooking_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0007_mpesaresponse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0008_rename_mpesaresponse_payment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0009_remove_payment_balance_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0010_alter_payment_amount.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0011_alter_payment_mpesareceiptnumber_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0012_alter_payment_mpesareceiptnumber_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/WeAreKola.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/WeAreKola.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/AllTickets.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/AllTickets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/BuyMerchandise.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/merchandise/BuyMerchandise.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Kolacopia.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/Kolacopia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Kolacopia2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/Kolacopia2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ProjectKola.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/ProjectKola.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Scanner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ShopMen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/merchandise/ShopMen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ShopWomen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/merchandise/ShopWomen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/TicketForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/TicketStop.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/TicketStop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ticket_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/ticket_success.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -466,14 +67,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;migz44&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/migz44/kolaincweb.git&quot;,
+    &quot;accountId&quot;: &quot;94aecb7e-429b-4dfe-997d-5199b498e65c&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -487,15 +100,18 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Django Server.KOLA_INC.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Kolacopia.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.TicketForm.html.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\Owner\\AppData\\Roaming\\JetBrains\\PyCharm2025.1\\plugins\\Shell Script\\shellcheck.exe&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/PycharmProjects/KOLA_INC/Kola_app/Kola_assets/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/PycharmProjects/KOLA_INC/templates&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -512,20 +128,27 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\images" />
       <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\templates" />
+      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\sounds" />
+      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\images" />
       <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\assets\images" />
       <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\images\Men" />
-      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\images\artists" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app" />
-      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\images\artists" />
-      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\assets\css" />
-      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\css" />
+      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\templates\merchandise" />
+      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\templates\ticket_forms" />
+      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\templates\events" />
+      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\templates\admin" />
+      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\templates\scanner" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.KOLA_INC">
+    <configuration name="Kolacopia.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KolaIncWeb/templates/Kolacopia.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="TicketForm.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/KolaIncWeb/templates/TicketForm.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="KOLA_INC" type="Python.DjangoServer" factoryName="Django server">
       <module name="KolaIncWeb" />
       <option name="ENV_FILES" value="" />
@@ -552,6 +175,12 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Kolacopia.html" />
+        <item itemvalue="JavaScript Debug.TicketForm.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -587,11 +216,35 @@
       <workItem from="1757514176028" duration="15118000" />
       <workItem from="1757530869213" duration="3283000" />
       <workItem from="1757583499563" duration="6634000" />
-      <workItem from="1757680620298" duration="5352000" />
+      <workItem from="1757680620298" duration="5770000" />
+      <workItem from="1757692548193" duration="16110000" />
+      <workItem from="1757786319653" duration="6686000" />
+      <workItem from="1757860870799" duration="18628000" />
+      <workItem from="1757925871344" duration="301000" />
+      <workItem from="1757927504810" duration="5449000" />
+      <workItem from="1757958411112" duration="8592000" />
+      <workItem from="1758098875467" duration="6070000" />
+      <workItem from="1758117560820" duration="4665000" />
+      <workItem from="1758142766571" duration="5366000" />
+      <workItem from="1758184911121" duration="10000" />
+      <workItem from="1758185562266" duration="827000" />
     </task>
+    <task id="LOCAL-00001" summary="push (1)">
+      <option name="closed" value="true" />
+      <created>1757686335991</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757686335992</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push (1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="push (1)" />
   </component>
 </project>

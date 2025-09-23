@@ -20,7 +20,23 @@ def make_unique_code(length: int = 8):
     alphabet = string.ascii_uppercase + string.digits
     return ''.join(secrets.choice(alphabet) for _ in range(length))
 
+# ----------------- New Event Model -----------------
+class Event(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=191, unique=True)
+    description = models.TextField(blank=True)
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+    location = models.CharField(max_length=191, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['start_date']
+
+    def __str__(self):
+        return self.name
+
+# ----------------- Ticket Model -----------------
 class Ticket(models.Model):
     TICKET_CHOICES = [
         ('earlyBird', 'Early Bird'),
@@ -35,7 +51,7 @@ class Ticket(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     full_name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=191, validators=[validate_email_domain], db_index=True)  # safe for MySQL
+    email = models.EmailField(max_length=191, validators=[validate_email_domain], db_index=True)
     phone = models.CharField(max_length=20, validators=[validate_kenyan_phone_number])
     ticket_type = models.CharField(max_length=50, choices=TICKET_CHOICES)
     ticket_price = models.IntegerField()
@@ -48,6 +64,9 @@ class Ticket(models.Model):
     qr_code = models.ImageField(upload_to='qrcodes/', blank=True)
     unique_code = models.CharField(max_length=12, unique=True, blank=True)
     is_used = models.BooleanField(default=False)
+
+    # ---------- New relation to Event ----------
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='tickets')
 
     class Meta:
         ordering = ['-created_at']
@@ -91,7 +110,7 @@ class Ticket(models.Model):
     def __str__(self):
         return f"{self.full_name} - {self.ticket_type} ({self.unique_code})"
 
-
+# ----------------- TicketScan Model -----------------
 class TicketScan(models.Model):
     SCAN_STATUS_CHOICES = [
         ('success', 'Success'),
@@ -118,7 +137,7 @@ class TicketScan(models.Model):
             self.scanned_by = self.request_user.username
         super().save(*args, **kwargs)
 
-
+# ----------------- Payment Model -----------------
 class Payment(models.Model):
     merchardId = models.CharField(unique=True, max_length=191)
     checkoutId = models.CharField(unique=True, max_length=191)
@@ -129,7 +148,7 @@ class Payment(models.Model):
     amount = models.IntegerField(default=0)
     TransactionDate = models.DateTimeField(auto_now_add=True, null=True)
 
-
+# ----------------- TicketScanLog Model -----------------
 class TicketScanLog(models.Model):
     ticket_id = models.CharField(max_length=100)
     scanned_at = models.DateTimeField(default=timezone.now)

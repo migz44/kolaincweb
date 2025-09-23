@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -87,25 +88,39 @@ WSGI_APPLICATION = 'KOLA_INC.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': os.getenv('DB_NAME', 'kolaincDB'),
-#         'USER': os.getenv('DB_USER', 'kolaincUser'),
-#         'PASSWORD': os.getenv('DB_PASSWORD', 'alokcni'),
+#         'NAME': os.getenv('DB_NAME', 'kolaapp'),
+#         'USER': os.getenv('DB_USER', 'root'),
+#         'PASSWORD': os.getenv('DB_PASSWORD', ''),
 #         'HOST': os.getenv('DB_HOST', 'localhost'),
 #         'PORT': os.getenv('DB_PORT', '3306'),
 #     }
 # }
 
-
+#
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'NAME': 'kolaapp',
+        'NAME': os.getenv('DB_NAME', 'kolaincDB'),
+        'USER': os.getenv('DB_USER', 'kolaincUser'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'alokcni'),
+        'HOST': os.getenv('DB_HOST', 'db'),
+        'PORT': os.getenv('DB_PORT', '3307'),
     }
 }
+
+# docker compose up
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#         'NAME': 'kolaapp',
+#     }
+# }
 
 
 
@@ -152,6 +167,9 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'assets'
 
 STATICFILES_DIRS = [BASE_DIR / "kola_app/kola_assets"]
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 
 # Default primary key field type

@@ -65,9 +65,6 @@ def test(request):
 
 
 def TicketForm(request):
-    """
-    Generates QR codes that link to the validation endpoint using the short unique_code.
-    """
     if request.method == "POST":
         full_name = request.POST.get('ticket-form-name')
         email = request.POST.get('ticket-form-email')
@@ -77,21 +74,16 @@ def TicketForm(request):
         message = request.POST.get('ticket-form-message', '')
         payment_method = request.POST.get('paymentMethod')
         mpesa_number = request.POST.get('mpesaNumber')
+        event_id = request.POST.get('event_id')
 
-        TICKET_PRICES = {
-            'earlyBird': 1500,
-            'standard': 2000,
-            'gate': 2500,
-        }
+        TICKET_PRICES = {'earlyBird': 1500,'standard': 2000,'gate': 2500,}
         ticket_price = TICKET_PRICES.get(ticket_type_key, 0)
         purchase_total = ticket_price * number_of_tickets
 
-        # Initiate payment
         triggerSTK(mpesa_number, purchase_total)
         created_tickets = []
 
         for i in range(number_of_tickets):
-            # Create the ticket. The save() method will generate the unique_code and QR code.
             t = Ticket.objects.create(
                 full_name=full_name,
                 email=email,
@@ -103,9 +95,94 @@ def TicketForm(request):
                 message=message,
                 payment_method=payment_method,
                 mpesa_number=mpesa_number,
+                event_id=event_id
             )
             created_tickets.append(t)
 
+        # Send email with attachments
+        email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
+        email_body = f"""
+            <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
+                <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
+                <p style="margin-top:0; color:#333;">
+                    You purchased <strong>{number_of_tickets}</strong> ticket(s). 
+                    Please find the QR codes attached below — present either at the gate.
+                </p>
+                <p style="font-size:12px; color:#999; margin-top:12px;">Total paid: KES {purchase_total}</p>
+            </div>
+        """
+
+        msg = EmailMultiAlternatives(
+            subject=email_subject,
+            body="Please open in an HTML-capable email client to view the ticket(s).",
+            from_email=settings.EMAIL_HOST_USER,
+            to=[email],
+        )
+        msg.attach_alternative(email_body, "text/html")
+
+        # Attach each QR code. The QR code is now saved to the model automatically.
+        for t in created_tickets:
+            if t.qr_code:  # Check if the QR code was generated and saved
+                # Read the file from the storage and attach it
+                with open(t.qr_code.path, 'rb') as f:
+                    file_data = f.read()
+                attachment_name = f"Ticket_{t.unique_code}.png"
+                msg.attach(attachment_name, file_data, 'image/png')
+            else:
+                # Fallback: Generate a simple QR code if something went wrong
+                print(f"Warning: QR code not found for ticket {t.unique_code}. Generating fallback.")
+                verify_url = request.build_absolute_uri(reverse('verify_ticket_code', kwargs={'code': t.unique_code}))
+                qr_img = qrcode.make(verify_url)
+                buffer = BytesIO()
+                qr_img.save(buffer, format='PNG')
+                buffer.seek(0)
+                attachment_name = f"Ticket_{t.unique_code}.png"
+                msg.attach(attachment_name, buffer.getvalue(), 'image/png')
+
+        msg.send(fail_silently=False)
+
+        # Redirect to ticket_success
+        last_ticket = created_tickets[-1]
+        success_url = reverse('ticket-success', kwargs={'ticket_id': last_ticket.id})
+        return redirect(f"{success_url}?count={number_of_tickets}")
+
+    return render(request, 'ticket_forms/TicketForm.html')
+
+
+def TicketForm2(request):
+    if request.method == "POST":
+        full_name = request.POST.get('ticket-form-name')
+        email = request.POST.get('ticket-form-email')
+        phone = request.POST.get('ticket-form-phone')
+        ticket_type_key = request.POST.get('TicketForm')
+        number_of_tickets = int(request.POST.get('ticket-form-number') or 1)
+        message = request.POST.get('ticket-form-message', '')
+        payment_method = request.POST.get('paymentMethod')
+        mpesa_number = request.POST.get('mpesaNumber')
+        event_id = request.POST.get('event_id')
+
+        TICKET_PRICES = {'earlyBird': 1500,'standard': 2000,'gate': 2500,}
+        ticket_price = TICKET_PRICES.get(ticket_type_key, 0)
+        purchase_total = ticket_price * number_of_tickets
+
+        triggerSTK(mpesa_number, purchase_total)
+        created_tickets = []
+
+        for i in range(number_of_tickets):
+            t = Ticket.objects.create(
+                full_name=full_name,
+                email=email,
+                phone=phone,
+                ticket_type=ticket_type_key,
+                ticket_price=ticket_price,
+                number_of_tickets=1,
+                total_price=ticket_price,
+                message=message,
+                payment_method=payment_method,
+                mpesa_number=mpesa_number,
+                event_id=event_id
+            )
+            created_tickets.append(t)
         # Send email with attachments
         email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
         email_body = f"""
@@ -153,103 +230,10 @@ def TicketForm(request):
         success_url = reverse('ticket-success', kwargs={'ticket_id': last_ticket.id})
         return redirect(f"{success_url}?count={number_of_tickets}")
 
-    return render(request, 'ticket_forms/TicketForm.html')
-
-def TicketForm2(request):
-    """
-    Generates QR codes that link to the validation endpoint using the short unique_code.
-    """
-    if request.method == "POST":
-        full_name = request.POST.get('ticket-form-name')
-        email = request.POST.get('ticket-form-email')
-        phone = request.POST.get('ticket-form-phone')
-        ticket_type_key = request.POST.get('TicketForm')
-        number_of_tickets = int(request.POST.get('ticket-form-number') or 1)
-        message = request.POST.get('ticket-form-message', '')
-        payment_method = request.POST.get('paymentMethod')
-        mpesa_number = request.POST.get('mpesaNumber')
-
-        TICKET_PRICES = {
-            'earlyBird': 1500,
-            'standard': 2000,
-            'gate': 2500,
-        }
-        ticket_price = TICKET_PRICES.get(ticket_type_key, 0)
-        purchase_total = ticket_price * number_of_tickets
-
-        # Initiate payment
-        triggerSTK(mpesa_number, purchase_total)
-        created_tickets = []
-
-        for i in range(number_of_tickets):
-            # Create the ticket. The save() method will generate the unique_code and QR code.
-            t = Ticket.objects.create(
-                full_name=full_name,
-                email=email,
-                phone=phone,
-                ticket_type=ticket_type_key,
-                ticket_price=ticket_price,
-                number_of_tickets=1,
-                total_price=ticket_price,
-                message=message,
-                payment_method=payment_method,
-                mpesa_number=mpesa_number,
-            )
-            created_tickets.append(t)
-
-        # Send email with attachments
-        email_subject = "🎉 Your Tickets for WannaParty 🎉"
-        email_body = f"""
-            <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
-                <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
-                <p style="margin-top:0; color:#333;">
-                    You purchased <strong>{number_of_tickets}</strong> ticket(s). 
-                    Please find the QR codes attached below — present either at the gate.
-                </p>
-                <p style="font-size:12px; color:#999; margin-top:12px;">Total paid: KES {purchase_total}</p>
-            </div>
-        """
-
-        msg = EmailMultiAlternatives(
-            subject=email_subject,
-            body="Please open in an HTML-capable email client to view the ticket(s).",
-            from_email=settings.EMAIL_HOST_USER,
-            to=[email],
-        )
-        msg.attach_alternative(email_body, "text/html")
-
-        # Attach each QR code. The QR code is now saved to the model automatically.
-        for t in created_tickets:
-            if t.qr_code: # Check if the QR code was generated and saved
-                # Read the file from the storage and attach it
-                with open(t.qr_code.path, 'rb') as f:
-                    file_data = f.read()
-                attachment_name = f"Ticket_{t.unique_code}.png"
-                msg.attach(attachment_name, file_data, 'image/png')
-            else:
-                # Fallback: Generate a simple QR code if something went wrong
-                print(f"Warning: QR code not found for ticket {t.unique_code}. Generating fallback.")
-                verify_url = request.build_absolute_uri(reverse('verify_ticket_code', kwargs={'code': t.unique_code}))
-                qr_img = qrcode.make(verify_url)
-                buffer = BytesIO()
-                qr_img.save(buffer, format='PNG')
-                buffer.seek(0)
-                attachment_name = f"Ticket_{t.unique_code}.png"
-                msg.attach(attachment_name, buffer.getvalue(), 'image/png')
-
-        msg.send(fail_silently=False)
-
-        # Redirect to ticket_success
-        last_ticket = created_tickets[-1]
-        success_url = reverse('ticket-success', kwargs={'ticket_id': last_ticket.id})
-        return redirect(f"{success_url}?count={number_of_tickets}")
-
     return render(request, 'ticket_forms/TicketForm2.html')
 
+
 def TicketForm3(request):
-    """
-    Generates QR codes that link to the validation endpoint using the short unique_code.
-    """
     if request.method == "POST":
         full_name = request.POST.get('ticket-form-name')
         email = request.POST.get('ticket-form-email')
@@ -259,21 +243,16 @@ def TicketForm3(request):
         message = request.POST.get('ticket-form-message', '')
         payment_method = request.POST.get('paymentMethod')
         mpesa_number = request.POST.get('mpesaNumber')
+        event_id = request.POST.get('event_id')
 
-        TICKET_PRICES = {
-            'earlyBird': 1500,
-            'standard': 2000,
-            'gate': 2500,
-        }
+        TICKET_PRICES = {'earlyBird': 1500,'standard': 2000,'gate': 2500,}
         ticket_price = TICKET_PRICES.get(ticket_type_key, 0)
         purchase_total = ticket_price * number_of_tickets
 
-        # Initiate payment
         triggerSTK(mpesa_number, purchase_total)
         created_tickets = []
 
         for i in range(number_of_tickets):
-            # Create the ticket. The save() method will generate the unique_code and QR code.
             t = Ticket.objects.create(
                 full_name=full_name,
                 email=email,
@@ -285,11 +264,12 @@ def TicketForm3(request):
                 message=message,
                 payment_method=payment_method,
                 mpesa_number=mpesa_number,
+                event_id=event_id
             )
             created_tickets.append(t)
 
         # Send email with attachments
-        email_subject = "🎉 Your Tickets for WannaParty 🎉"
+        email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
         email_body = f"""
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
                 <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
@@ -311,7 +291,7 @@ def TicketForm3(request):
 
         # Attach each QR code. The QR code is now saved to the model automatically.
         for t in created_tickets:
-            if t.qr_code: # Check if the QR code was generated and saved
+            if t.qr_code:  # Check if the QR code was generated and saved
                 # Read the file from the storage and attach it
                 with open(t.qr_code.path, 'rb') as f:
                     file_data = f.read()
@@ -337,10 +317,8 @@ def TicketForm3(request):
 
     return render(request, 'ticket_forms/TicketForm3.html')
 
+
 def TicketForm4(request):
-    """
-    Generates QR codes that link to the validation endpoint using the short unique_code.
-    """
     if request.method == "POST":
         full_name = request.POST.get('ticket-form-name')
         email = request.POST.get('ticket-form-email')
@@ -350,21 +328,16 @@ def TicketForm4(request):
         message = request.POST.get('ticket-form-message', '')
         payment_method = request.POST.get('paymentMethod')
         mpesa_number = request.POST.get('mpesaNumber')
+        event_id = request.POST.get('event_id')
 
-        TICKET_PRICES = {
-            'earlyBird': 1500,
-            'standard': 2000,
-            'gate': 2500,
-        }
+        TICKET_PRICES = {'earlyBird': 1500,'standard': 2000,'gate': 2500,}
         ticket_price = TICKET_PRICES.get(ticket_type_key, 0)
         purchase_total = ticket_price * number_of_tickets
 
-        # Initiate payment
         triggerSTK(mpesa_number, purchase_total)
         created_tickets = []
 
         for i in range(number_of_tickets):
-            # Create the ticket. The save() method will generate the unique_code and QR code.
             t = Ticket.objects.create(
                 full_name=full_name,
                 email=email,
@@ -376,11 +349,12 @@ def TicketForm4(request):
                 message=message,
                 payment_method=payment_method,
                 mpesa_number=mpesa_number,
+                event_id=event_id
             )
             created_tickets.append(t)
 
         # Send email with attachments
-        email_subject = "🎉 Your Tickets for WannaParty 🎉"
+        email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
         email_body = f"""
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
                 <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
@@ -402,7 +376,7 @@ def TicketForm4(request):
 
         # Attach each QR code. The QR code is now saved to the model automatically.
         for t in created_tickets:
-            if t.qr_code: # Check if the QR code was generated and saved
+            if t.qr_code:  # Check if the QR code was generated and saved
                 # Read the file from the storage and attach it
                 with open(t.qr_code.path, 'rb') as f:
                     file_data = f.read()
@@ -428,10 +402,8 @@ def TicketForm4(request):
 
     return render(request, 'ticket_forms/TicketForm4.html')
 
+
 def TicketForm5(request):
-    """
-    Generates QR codes that link to the validation endpoint using the short unique_code.
-    """
     if request.method == "POST":
         full_name = request.POST.get('ticket-form-name')
         email = request.POST.get('ticket-form-email')
@@ -441,21 +413,16 @@ def TicketForm5(request):
         message = request.POST.get('ticket-form-message', '')
         payment_method = request.POST.get('paymentMethod')
         mpesa_number = request.POST.get('mpesaNumber')
+        event_id = request.POST.get('event_id')
 
-        TICKET_PRICES = {
-            'earlyBird': 1500,
-            'standard': 2000,
-            'gate': 2500,
-        }
+        TICKET_PRICES = {'earlyBird': 1500,'standard': 2000,'gate': 2500,}
         ticket_price = TICKET_PRICES.get(ticket_type_key, 0)
         purchase_total = ticket_price * number_of_tickets
 
-        # Initiate payment
         triggerSTK(mpesa_number, purchase_total)
         created_tickets = []
 
         for i in range(number_of_tickets):
-            # Create the ticket. The save() method will generate the unique_code and QR code.
             t = Ticket.objects.create(
                 full_name=full_name,
                 email=email,
@@ -467,11 +434,12 @@ def TicketForm5(request):
                 message=message,
                 payment_method=payment_method,
                 mpesa_number=mpesa_number,
+                event_id=event_id
             )
             created_tickets.append(t)
 
         # Send email with attachments
-        email_subject = "🎉 Your Tickets for WannaParty 🎉"
+        email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
         email_body = f"""
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
                 <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
@@ -493,7 +461,7 @@ def TicketForm5(request):
 
         # Attach each QR code. The QR code is now saved to the model automatically.
         for t in created_tickets:
-            if t.qr_code: # Check if the QR code was generated and saved
+            if t.qr_code:  # Check if the QR code was generated and saved
                 # Read the file from the storage and attach it
                 with open(t.qr_code.path, 'rb') as f:
                     file_data = f.read()
@@ -516,8 +484,8 @@ def TicketForm5(request):
         last_ticket = created_tickets[-1]
         success_url = reverse('ticket-success', kwargs={'ticket_id': last_ticket.id})
         return redirect(f"{success_url}?count={number_of_tickets}")
-
     return render(request, 'ticket_forms/TicketForm5.html')
+
 
 
 def triggerSTK(phone, amount):
@@ -890,4 +858,3 @@ def log_ticket_scan(request):
             "scan_id": log.id,
             "total_scans": total_scans
         })
-

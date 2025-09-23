@@ -202,7 +202,7 @@
 
       <div class="col-lg-8 mx-auto">
         <form class="custom-form ticket-form shadow-lg p-4 rounded"
-              action="{% url 'TicketForm2-page' %}" method="post" role="form"
+              action="{% url 'TicketForm-page' %}" method="post" role="form"
               onsubmit="return validateTicketForm()">
           {% csrf_token %}
 
@@ -284,6 +284,8 @@
               <input type="tel" class="form-control" id="mpesaNumber" name="mpesaNumber"
                      placeholder="07XXXXXXXX or 2547XXXXXXXX" required>
             </div>
+{#              ----------------HIDDEN INPUT#}
+                <input type="hidden" name="event_id" value="{{ event.id }}">
 
             <!-- Submit Button -->
             <div class="d-grid mt-4">

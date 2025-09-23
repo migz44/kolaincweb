@@ -4,57 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (1)">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/sounds/ScannerAlertFail.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/sounds/ScannerBeepSuccess.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/admin-dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/scanner/Scanner.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/scanner/live_scans.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/KolaIncWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KolaIncWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (2)">
+      <change afterPath="$PROJECT_DIR$/templates/admin/MainAdminDashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/event_dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KOLA_INC/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kola_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0002_ticket_unique_code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0003_delete_purchase_ticketscan_scanned_by_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0004_event_ticketbooking_ticket_event_tickettype_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0005_alter_ticket_ticket_type_remove_ticket_is_used_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0006_remove_ticket_event_delete_ticketbooking_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0007_mpesaresponse.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0008_rename_mpesaresponse_payment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0009_remove_payment_balance_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0010_alter_payment_amount.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0011_alter_payment_mpesareceiptnumber_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0012_alter_payment_mpesareceiptnumber_and_more.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Kola_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kola_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/WeAreKola.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/WeAreKola.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/AllTickets.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/AllTickets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/BuyMerchandise.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/merchandise/BuyMerchandise.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Kolacopia.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/Kolacopia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Kolacopia2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/Kolacopia2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ProjectKola.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/ProjectKola.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Scanner.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ShopMen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/merchandise/ShopMen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ShopWomen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/merchandise/ShopWomen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/TicketForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/TicketStop.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/TicketStop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/ticket_success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm4.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm5.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm5.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -227,7 +191,9 @@
       <workItem from="1758117560820" duration="4665000" />
       <workItem from="1758142766571" duration="5366000" />
       <workItem from="1758184911121" duration="10000" />
-      <workItem from="1758185562266" duration="827000" />
+      <workItem from="1758185562266" duration="5095000" />
+      <workItem from="1758469969082" duration="10507000" />
+      <workItem from="1758623352502" duration="3103000" />
     </task>
     <task id="LOCAL-00001" summary="push (1)">
       <option name="closed" value="true" />
@@ -237,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757686335992</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="push (2)">
+      <option name="closed" value="true" />
+      <created>1758187105076</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1758187105076</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +219,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push (1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="push (1)" />
+    <MESSAGE value="push (2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="push (2)" />
   </component>
 </project>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ event.name }} - KOLA Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* COPY ALL THE SAME STYLES FROM main_dashboard.html */
+        :root {
+            --dark-bg: #0f172a;
+            --dark-card: #1e293b;
+            --dark-border: #334155;
+            --dark-text: #e2e8f0;
+            --dark-hover: #2d3748;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --info: #3b82f6;
+            --purple: #8b5cf6;
+            --pink: #ec4899;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: var(--dark-text);
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: var(--dark-card);
+            padding: 20px;
+            border-right: 1px solid var(--dark-border);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--dark-border);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-header h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .nav-item {
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-item:hover {
+            background: var(--dark-hover);
+        }
+
+        .nav-item.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .nav-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--dark-card), var(--dark-bg));
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            border: 1px solid var(--dark-border);
+            display: flex;
+            justify-content: between;
+            align-items: center;
+        }
+
+        .event-info h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+        }
+
+        .event-info p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .event-meta {
+            text-align: right;
+        }
+
+        .event-date {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .event-status {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .status-active { background: rgba(16, 185, 129, 0.2); color: var(--success); }
+        .status-completed { background: rgba(139, 92, 246, 0.2); color: var(--purple); }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: var(--dark-card);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--dark-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--purple));
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            opacity: 0.8;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+            background: linear-gradient(135deg, var(--primary), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--dark-text);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Charts Container */
+        .charts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .chart-card {
+            background: var(--dark-card);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--dark-border);
+        }
+
+        .chart-card h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Data Sections */
+        .data-section {
+            background: var(--dark-card);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--dark-border);
+            margin-bottom: 24px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--dark-card);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .data-table th {
+            background: linear-gradient(135deg, var(--primary), var(--purple));
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .data-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:hover {
+            background: var(--dark-hover);
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .status-success { background: rgba(16, 185, 129, 0.2); color: var(--success); }
+        .status-failed { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+        .status-pending { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+
+        /* Navigation */
+        .event-nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .nav-btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .nav-btn-secondary {
+            background: var(--dark-bg);
+            color: var(--dark-text);
+            border: 1px solid var(--dark-border);
+        }
+
+        .nav-btn-secondary:hover {
+            background: var(--dark-hover);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sidebar {
+                width: 250px;
+            }
+            .main-content {
+                margin-left: 250px;
+            }
+            .charts-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1001;
+                background: var(--primary);
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .dashboard-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .event-meta {
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--dark-border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2> 🎪 {{ event.name|truncatechars:15 }}</h2>
+        </div>
+
+        <div class="nav-item" onclick="location.href='{% url 'main_admin_dashboard' %}'">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to All Events</span>
+        </div>
+
+        <div class="nav-item active">
+            <i class="fas fa-chart-line"></i>
+            <span>Overview</span>
+        </div>
+
+        <div class="nav-item">
+            <i class="fas fa-ticket-alt"></i>
+            <span>Tickets</span>
+        </div>
+
+        <div class="nav-item">
+            <i class="fas fa-qrcode"></i>
+            <span>Scan Analytics</span>
+        </div>
+
+        <div class="nav-item">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>Revenue</span>
+        </div>
+
+        <div class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Attendees</span>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px 0; border-top: 1px solid var(--dark-border);">
+            <div class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <button class="menu-toggle" style="display: none;">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Event Header -->
+        <div class="dashboard-header">
+            <div class="event-info">
+                <h1>{{ event.name }}</h1>
+                <p>{{ event.location|default:"No location specified" }}</p>
+            </div>
+            <div class="event-meta">
+                <div class="event-date">{{ event.date|date:"F j, Y • g:i A" }}</div>
+                <span class="event-status status-{% if event.is_active %}active{% else %}completed{% endif %}">
+                    {% if event.is_active %}ACTIVE{% else %}COMPLETED{% endif %}
+                </span>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="event-nav">
+            <button class="nav-btn nav-btn-primary" onclick="location.href='{% url 'main_admin_dashboard' %}'">
+                <i class="fas fa-home"></i> All Events
+            </button>
+            <button class="nav-btn nav-btn-secondary">
+                <i class="fas fa-edit"></i> Edit Event
+            </button>
+            <button class="nav-btn nav-btn-secondary">
+                <i class="fas fa-download"></i> Export Report
+            </button>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card fade-in">
+                <div class="stat-header">
+                    <div class="stat-icon">🎫</div>
+                </div>
+                <div class="stat-number">{{ total_tickets }}</div>
+                <div class="stat-label">Total Tickets Sold</div>
+            </div>
+
+            <div class="stat-card fade-in">
+                <div class="stat-header">
+                    <div class="stat-icon">✅</div>
+                </div>
+                <div class="stat-number">{{ used_tickets }}</div>
+                <div class="stat-label">Tickets Used</div>
+            </div>
+
+            <div class="stat-card fade-in">
+                <div class="stat-header">
+                    <div class="stat-icon">⏳</div>
+                </div>
+                <div class="stat-number">{{ unused_tickets }}</div>
+                <div class="stat-label">Tickets Pending</div>
+            </div>
+
+            <div class="stat-card fade-in">
+                <div class="stat-header">
+                    <div class="stat-icon">💰</div>
+                </div>
+                <div class="stat-number">KES {{ total_revenue }}</div>
+                <div class="stat-label">Total Revenue</div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-container">
+            <div class="chart-card">
+                <h3><i class="fas fa-chart-pie"></i> Ticket Distribution</h3>
+                <canvas id="ticketTypeChart" height="250"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3><i class="fas fa-chart-bar"></i> Revenue by Type</h3>
+                <canvas id="revenueChart" height="250"></canvas>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="data-section">
+            <div class="section-header">
+                <h3><i class="fas fa-history"></i> Recent Scan Activity</h3>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Ticket Code</th>
+                            <th>Attendee</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Time</th>
+                            <th>Scanner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for scan in recent_scans %}
+                        <tr>
+                            <td><strong>{{ scan.ticket.unique_code }}</strong></td>
+                            <td>{{ scan.ticket.full_name }}</td>
+                            <td>{{ scan.ticket.get_ticket_type_display }}</td>
+                            <td>
+                                <span class="status-badge status-{{ scan.status }}">
+                                    {{ scan.status|upper }}
+                                </span>
+                            </td>
+                            <td>{{ scan.scanned_at|date:"M d, H:i" }}</td>
+                            <td>{{ scan.scanned_by|default:"System" }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 40px;">
+                                <i class="fas fa-inbox" style="font-size: 3rem; opacity: 0.5; margin-bottom: 15px;"></i>
+                                <p>No scan activity recorded yet</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Ticket Type Analysis -->
+        <div class="data-section">
+            <div class="section-header">
+                <h3><i class="fas fa-ticket-alt"></i> Ticket Type Analysis</h3>
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>Total Sold</th>
+                        <th>Used</th>
+                        <th>Pending</th>
+                        <th>Usage Rate</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stat in ticket_type_stats %}
+                    <tr>
+                        <td>{{ stat.ticket_type }}</td>
+                        <td>{{ stat.count }}</td>
+                        <td>{{ stat.used }}</td>
+                        <td>{{ stat.pending }}</td>
+                        <td>{{ stat.usage_rate|floatformat:1 }}%</td>
+                        <td>KES {{ stat.revenue|default:0 }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="6" style="text-align: center; padding: 40px;">
+                            <i class="fas fa-inbox" style="font-size: 3rem; opacity: 0.5; margin-bottom: 15px;"></i>
+                            <p>No ticket data available</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Charts
+        const ticketTypeCtx = document.getElementById('ticketTypeChart').getContext('2d');
+        new Chart(ticketTypeCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [{% for stat in ticket_type_stats %}'{{ stat.ticket_type }}',{% endfor %}],
+                datasets: [{
+                    data: [{% for stat in ticket_type_stats %}{{ stat.count }},{% endfor %}],
+                    backgroundColor: [
+                        '#6366f1', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6',
+                        '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#64748b'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#1e293b'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#e2e8f0',
+                            padding: 20,
+                            usePointStyle: true
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: [{% for stat in ticket_type_stats %}'{{ stat.ticket_type }}',{% endfor %}],
+                datasets: [{
+                    label: 'Revenue (KES)',
+                    data: [{% for stat in ticket_type_stats %}{{ stat.revenue|default:0 }},{% endfor %}],
+                    backgroundColor: '#6366f1',
+                    borderColor: '#6366f1',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        grid: { color: 'rgba(255,255,255,0.1)' },
+                        ticks: { color: '#e2e8f0' }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(255,255,255,0.1)' },
+                        ticks: { color: '#e2e8f0' }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#e2e8f0' }
+                    }
+                }
+            }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('open');
+        });
+
+        // Auto-refresh every 30 seconds
+        setInterval(() => {
+            location.reload();
+        }, 30000);
+    </script>
+</body>
+</html>

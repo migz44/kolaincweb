@@ -37,6 +37,11 @@
 
     <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><!--THIS IS THE FOOTER SECTION END-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
 
 
 </head>
@@ -205,19 +210,350 @@
 </div>
 <!--THIS IS THE TOP NAVBAR-->
 
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="page-heading about-page-heading" id="top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="inner-content">
-                        <h2>𝙒𝙚𝙒𝙖𝙣𝙣𝙖𝙋𝙖𝙧𝙩𝙮</h2>
+<!-- ***** Main Banner Area Start ***** -->
+<section class="kola-contact-hero" id="top">
+    <div class="hero-background">
+        <div class="hero-gradient-overlay"></div>
+        <div class="floating-elements">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-8 mx-auto text-center">
+                <!-- KOLA INC Branding -->
+                <div class="kola-brand mb-4">
+                    <img src="{% static 'images/KolaIncLogo.png' %}" alt="KOLA INC" class="kola-logo">
+                    <span class="kola-badge">Events & Entertainment</span>
+                </div>
+
+                <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+                    <h1 class="hero-main-title">
+                        <span class="title-part-1">We Wanna</span>
+                        <span class="title-part-2">Party</span>
+                        <span class="title-accent">With You</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Let's create unforgettable experiences together. Get in touch with KOLA INC
+                        and let's bring your next event to life.
+                    </p>
+
+                    <!-- Scroll Down Text -->
+                    <div class="scroll-down-text">
+                        <span class="scroll-text">Scroll Down</span>
+                        <div class="scroll-arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Enhanced Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Explore More</span>
+        </div>
     </div>
-    <!-- ***** Main Banner Area End ***** -->
+</section>
+<!-- ***** Main Banner Area End ***** -->
+
+<style>
+.kola-contact-hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0c0c0c 100%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('{% static "images/hero-bg-pattern.png" %}') center/cover;
+}
+
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+        rgba(231, 76, 60, 0.1) 0%,
+        rgba(231, 76, 60, 0.05) 50%,
+        rgba(231, 76, 60, 0.1) 100%);
+}
+
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-element {
+    position: absolute;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.element-1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.element-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.element-3 {
+    width: 80px;
+    height: 80px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.kola-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.kola-logo {
+    height: 80px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.kola-badge {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-main-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.title-part-1 {
+    display: block;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.title-part-2 {
+    display: block;
+    background: linear-gradient(45deg, #ffffff, #e74c3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-accent {
+    display: block;
+    font-size: 2.5rem;
+    color: #e74c3c;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #bdc3c7;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Scroll Down Text Styling */
+.scroll-down-text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-text {
+    color: #e74c3c;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.scroll-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+.scroll-down-text:hover .scroll-text::after {
+    width: 100%;
+}
+
+.scroll-down-text:hover .scroll-text {
+    letter-spacing: 3px;
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #e74c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.scroll-down-text:hover .scroll-arrow {
+    background: #e74c3c;
+    transform: scale(1.1);
+}
+
+.scroll-down-text:hover .scroll-arrow i {
+    color: white;
+}
+
+.scroll-arrow i {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, #e74c3c, transparent);
+    margin: 0 auto 10px;
+    animation: scrollFlow 2s infinite;
+}
+
+@keyframes scrollFlow {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        height: 40px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-main-title {
+        font-size: 3rem;
+    }
+
+    .title-accent {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .scroll-text {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .kola-logo {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-main-title {
+        font-size: 2.2rem;
+    }
+
+    .title-accent {
+        font-size: 1.4rem;
+    }
+
+    .scroll-text {
+        font-size: 0.9rem;
+    }
+
+    .scroll-arrow {
+        width: 35px;
+        height: 35px;
+    }
+}
+</style>
 
     <!-- ***** About Area Starts ***** -->
     <div class="about-us">
@@ -347,64 +683,296 @@
     <!-- ***** Subscribe Area Ends ***** -->
 
 <!--THIS IS THE FOOTER SECTION START-->
-<footer>
+<footer class="custom-footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
-                <div class="first-item">
+            <!-- Company Info Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-brand">
                     <div class="logo">
-                        <img src="{% static 'images/KolaIncLogo.png' %} " alt="KOLA INC.">
+                        <img src="{% static 'images/KolaIncLogo.png' %}" alt="KOLA INC." class="footer-logo">
                     </div>
-                    <ul>
-                        <li><a href="#">NAIROBI</a></li>
-                        <li><a href="#">kolaincc@gmail.com</a></li>
-                        <li><a href="#">07xxxxxxxx</a></li>
+                    <p class="company-description">Creating unforgettable experiences through exceptional event planning and management.</p>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>NAIROBI, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:kolaincc@gmail.com">kolaincc@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0791575311">0791 575 311</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0716599748">0716 599 748</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <h4>Shopping &amp; Categories</h4>
-                <ul>
-                    <li><a href="#">Men’s Shopping</a></li>
-                    <li><a href="#">Women’s Shopping</a></li>
-                    <li><a href="#">Kid's Shopping</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li><a href="#">Homepage</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3">
-                <h4>Help &amp; Information</h4>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">FAQ's</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Tracking ID</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-12">
-                <div class="under-footer">
-                    <p>Copyright © 2025 KOLA INC., Ltd. All Rights Reserved.
 
-                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">Migzzz</a>
-                    </p>
+            <!-- Quick Links Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        <li><a href="{% url 'Home-page' %}"><i class="fas fa-home"></i> Homepage</a></li>
+                        <li><a href="{% url 'ContactUs-page' %}"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="{% url 'ContactUs-page' %}"><i class="fas fa-question-circle"></i> Help</a></li>
+                        <li><a href="{% url 'ContactUs-page' %}"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                        <li><a href="{% url 'AllTickets-page' %}"><i class="fas fa-calendar-alt"></i> Events</a></li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="newsletter-section">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest events and updates.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="subscribe-btn" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="social-links">
+                        <h5>Follow Us</h5>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/kola.incc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@kola.incc?_t=ZM-8uNXugdMGqj&_r=1"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>Copyright © 2025 KOLA INC., Ltd. All Rights Reserved.</p>
+                        <p class="design-credit">
+                            Design: <a href="https://www.instagram.com/mi._gguel?igsh=dDN6aTg0YzFraDhh" target="_blank">Migzzz.</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+.custom-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    padding: 60px 0 0;
+    margin-top: 50px;
+    border-top: 4px solid #e74c3c;
+}
+
+.footer-brand .footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.company-description {
+    color: #bdc3c7;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #ecf0f1;
+}
+
+.contact-info i {
+    color: #e74c3c;
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #e74c3c;
+}
+
+.footer-links h4,
+.newsletter-section h4 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.footer-links h4::after,
+.newsletter-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 50px;
+    height: 3px;
+    background: #e74c3c;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a:hover {
+    color: #e74c3c;
+    transform: translateX(5px);
+}
+
+.footer-links i {
+    margin-right: 10px;
+    color: #e74c3c;
+    width: 20px;
+}
+
+.newsletter-section p {
+    color: #bdc3c7;
+    margin-bottom: 20px;
+}
+
+.newsletter-form .input-group {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.newsletter-form .form-control {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background: #34495e;
+    color: #ffffff;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: #bdc3c7;
+}
+
+.subscribe-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #c0392b;
+}
+
+.social-links h5 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #34495e;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #e74c3c;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.copyright {
+    color: #bdc3c7;
+}
+
+.design-credit a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.design-credit a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-footer {
+        padding: 40px 0 0;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .newsletter-section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-links h4::after,
+    .newsletter-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .contact-info li {
+        justify-content: center;
+    }
+}
+</style>
 <!--THIS IS THE FOOTER SECTION END-->
 
 <!-- jQuery (only once) -->

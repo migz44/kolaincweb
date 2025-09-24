@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_daraja',
     'Kola_app.apps.KolaAppConfig',
+    'django.contrib.sitemaps',
 
 ]
 

@@ -1,12 +1,14 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.utils import timezone
+from django.urls import reverse
+from django.utils.text import slugify
 import uuid
 import secrets
 import string
 import re
 
-# Validators remain the same
+# ----------------- Validators -----------------
 def validate_kenyan_phone_number(value):
     pattern = r'^(\+?254|0)?[17]\d{8}$'
     if not re.match(pattern, value):
@@ -20,10 +22,11 @@ def make_unique_code(length: int = 8):
     alphabet = string.ascii_uppercase + string.digits
     return ''.join(secrets.choice(alphabet) for _ in range(length))
 
-# ----------------- New Event Model -----------------
+# ----------------- Event Model -----------------
 class Event(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=191, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)  # SEO-friendly URL
     description = models.TextField(blank=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
@@ -35,6 +38,16 @@ class Event(models.Model):
 
     def __str__(self):
         return self.name
+
+    # Auto-generate slug from name
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+    # Sitemap compatibility
+    def get_absolute_url(self):
+        return reverse('event-detail', kwargs={'slug': self.slug})
 
 # ----------------- Ticket Model -----------------
 class Ticket(models.Model):
@@ -65,7 +78,6 @@ class Ticket(models.Model):
     unique_code = models.CharField(max_length=12, unique=True, blank=True)
     is_used = models.BooleanField(default=False)
 
-    # ---------- New relation to Event ----------
     event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='tickets')
 
     class Meta:

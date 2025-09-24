@@ -4,6 +4,7 @@
 
 <head>
     <title>💃𝙒𝙚𝙒𝙖𝙣𝙣𝙖𝙋𝙖𝙧𝙩𝙮🕺</title>
+    <meta name="google-site-verification" content="H4o3iO4GOf2dPRX47785X5PH8qWyMiIr0qcBBKR2iO4" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +37,11 @@
     <link href="{% static 'css/templatemo-festava-live.css' %}" rel="stylesheet">
 
     <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><!--THIS IS THE FOOTER SECTION END-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
 
 
@@ -309,184 +315,334 @@
 </section>
 <!--THIS IS THE ABOUT EVENT SECTION END-->
 
-<!-- ***** Third Banner Area Start ***** -->
-<section class="features py-5">
-        <div class="section-overlay"></div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="0">
-                <div class="py-5">
-                    <svg width="38" height="38" viewBox="0 0 24 24">
-                        <use xlink:href="#calendar"></use>
-                    </svg>
-                    <h4 class="element-title text-capitalize my-3">Our Upcoming Events.</h4>
-                    <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
-                </div>
-            </div>
-            <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="300">
-                <div class="py-5">
-                    <svg width="38" height="38" viewBox="0 0 24 24">
-                        <use xlink:href="#shopping-bag"></use>
-                    </svg>
-                    <h4 class="element-title text-capitalize my-3">Our Online Store.</h4>
-                    <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
-                </div>
-            </div>
-            <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="600">
-                <div class="py-5">
-                    <svg width="38" height="38" viewBox="0 0 24 24">
-                        <use xlink:href="#gift"></use>
-                    </svg>
-                    <h4 class="element-title text-capitalize my-3">Special packaging</h4>
-                    <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
-                </div>
-            </div>
-            <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="900">
-                <div class="py-5">
-                    <svg width="38" height="38" viewBox="0 0 24 24">
-                        <use xlink:href="#arrow-cycle"></use>
-                    </svg>
-                    <h4 class="element-title text-capitalize my-3">24 HR Service</h4>
-                    <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-<!-- ***** Third Banner Area End ***** -->
 
 <!-- ***** Fifth Banner Area Start ***** -->
 <section id="new-arrival" class="new-arrival product-carousel py-5 position-relative overflow-hidden">
     <div class="container">
+        <!-- Our Events Catalogue Heading -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="events-catalogue-heading">
+                    Our Events Catalogue
+                </h2>
+                <div class="heading-underline"></div>
+            </div>
+        </div>
+
         <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-            <h4 class="text-uppercase">Our Events</h4>
+            <h4 class="text-uppercase">Featured Events</h4>
             <a href="{% url 'AllTickets-page' %}" class="btn-link">View All Events</a>
         </div>
+
         <div class="swiper product-swiper open-up" data-aos="zoom-out">
             <div class="swiper-wrapper d-flex">
+                <!-- Event cards remain the same -->
                 <div class="swiper-slide">
                     <div class="product-item image-zoom-effect link-effect">
                         <div class="image-holder position-relative">
-                            <a href="index.html">
-                                <img src="{% static 'images/Kolacopia.jpg' %}" alt="categories"
+                            <a href="{% url 'Kolacopia-page' %}">
+                                <img src="{% static 'images/Kolacopia.jpg' %}" alt="KOLACOPIA"
                                      class="product-image img-fluid">
                             </a>
-                            <a href="index.html" class="btn-icon btn-wishlist">
-                                <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <use xlink:href="#heart"></use>
-                                </svg>
-                            </a>
                             <div class="product-content">
-                                <h5 class="element-title text-uppercase fs-5 mt-3">
+                                <h5 class="element-title text-uppercase fs-5">
                                     <a href="{% url 'Kolacopia-page' %}">KOLACOPIA</a>
                                 </h5>
-
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="swiper-slide">
                     <div class="product-item image-zoom-effect link-effect">
                         <div class="image-holder position-relative">
-                            <a href="index.html">
-                                <img src="{% static 'images/PosterKolacopia_2.0.jpg' %}" alt="categories"
+                            <a href="#">
+                                <img src="{% static 'images/PosterKolacopia_2.0.jpg' %}" alt="KOLACOPIA 2.0"
                                      class="product-image img-fluid">
                             </a>
-                            <a href="index.html" class="btn-icon btn-wishlist">
-                                <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <use xlink:href="#heart"></use>
-                                </svg>
-                            </a>
                             <div class="product-content">
-                                <h5 class="text-uppercase fs-5 mt-3">
-                                    <a href="index.html">KOLACOPIA 2.0</a>
+                                <h5 class="text-uppercase fs-5">
+                                    <a href="#">KOLACOPIA 2.0</a>
                                 </h5>
-
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="swiper-slide">
                     <div class="product-item image-zoom-effect link-effect">
                         <div class="image-holder position-relative">
-                            <a href="index.html">
-                                <img src="{% static 'images/ProjectKola (1).jpg' %}" alt="categories"
+                            <a href="#">
+                                <img src="{% static 'images/ProjectKola (1).jpg' %}" alt="PROJECT KOLA"
                                      class="product-image img-fluid">
                             </a>
-                            <a href="index.html" class="btn-icon btn-wishlist">
-                                <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <use xlink:href="#heart"></use>
-                                </svg>
-                            </a>
                             <div class="product-content">
-                                <h5 class="text-uppercase fs-5 mt-3">
-                                    <a href="index.html">PROJECT KOLA</a>
+                                <h5 class="text-uppercase fs-5">
+                                    <a href="#">PROJECT KOLA</a>
                                 </h5>
-
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="swiper-slide">
                     <div class="product-item image-zoom-effect link-effect">
                         <div class="image-holder position-relative">
-                            <a href="index.html">
-                                <img src="{% static 'images/product-item-4.jpg' %}" alt="categories"
+                            <a href="#">
+                                <img src="{% static 'images/Kolacopia3.0EventPoster.jpg' %}" alt="KOLA EVENT"
                                      class="product-image img-fluid">
                             </a>
-                            <a href="index.html" class="btn-icon btn-wishlist">
-                                <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <use xlink:href="#heart"></use>
-                                </svg>
-                            </a>
                             <div class="product-content">
-                                <h5 class="text-uppercase fs-5 mt-3">
-                                    <a href="index.html">KOLA</a>
+                                <h5 class="text-uppercase fs-5">
+                                    <a href="#">KOLACOPIA 3.0</a>
                                 </h5>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="product-item image-zoom-effect link-effect">
-                        <div class="image-holder position-relative">
-                            <a href="index.html">
-                                <img src="{% static 'images/product-item-10.jpg' %}" alt="categories"
-                                     class="product-image img-fluid">
-                            </a>
-                            <a href="index.html" class="btn-icon btn-wishlist">
-                                <svg width="24" height="24" viewBox="0 0 24 24">
-                                    <use xlink:href="#heart"></use>
-                                </svg>
-                            </a>
-                            <div class="product-content">
-                                <h5 class="text-uppercase fs-5 mt-3">
-                                    <a href="index.html">KOLA</a>
-                                </h5>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
-        <div class="icon-arrow icon-arrow-left">
-            <svg width="50" height="50" viewBox="0 0 24 24">
-                <use xlink:href="#arrow-left"></use>
-            </svg>
-        </div>
-        <div class="icon-arrow icon-arrow-right">
-            <svg width="50" height="50" viewBox="0 0 24 24">
-                <use xlink:href="#arrow-right"></use>
-            </svg>
-        </div>
+            <div class="icon-arrow icon-arrow-left">
+                <svg width="50" height="50" viewBox="0 0 24 24">
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+            </div>
+            <div class="icon-arrow icon-arrow-right">
+                <svg width="50" height="50" viewBox="0 0 24 24">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </div>
         </div>
     </div>
 </section>
-<!-- ***** Fifth Banner Area Start ***** -->
+
+<style>
+/* Our Events Catalogue Heading - IMPROVED VISIBILITY */
+.events-catalogue-heading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #ffffff, #e74c3c, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+}
+
+.heading-underline {
+    width: 120px;
+    height: 5px;
+    background: linear-gradient(90deg, #e74c3c, #c0392b, #e74c3c);
+    border-radius: 3px;
+    margin-top: 15px;
+    box-shadow: 0 2px 10px rgba(231, 76, 60, 0.4);
+}
+
+/* Add a subtle background to ensure text visibility */
+.new-arrival {
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0c0c0c 100%);
+    position: relative;
+}
+
+.new-arrival::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e74c3c, transparent);
+}
+
+/* Enhanced Card Styling */
+.product-item {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+    margin: 10px;
+    height: 350px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+    border-color: #e74c3c;
+}
+
+.image-holder {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: 20px;
+    background: #1a1a1a;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+}
+
+.product-content h5 {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.product-content h5 a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    display: block;
+    padding: 5px 0;
+}
+
+.product-content h5 a:hover {
+    color: #e74c3c;
+}
+
+/* Swiper Navigation */
+.icon-arrow {
+    background: rgba(231, 76, 60, 0.9);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.icon-arrow:hover {
+    background: transparent;
+    border-color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.icon-arrow svg {
+    fill: white;
+}
+
+.icon-arrow:hover svg {
+    fill: #e74c3c;
+}
+
+.swiper-pagination-bullet {
+    background: #bdc3c7;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background: #e74c3c;
+    opacity: 1;
+}
+
+/* Section Header */
+h4.text-uppercase {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-link {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #e74c3c;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.btn-link:hover {
+    background: #e74c3c;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .events-catalogue-heading {
+        font-size: 2.5rem;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .heading-underline {
+        margin: 15px auto 0;
+        width: 100px;
+    }
+
+    .product-item {
+        margin: 5px;
+        height: 300px;
+    }
+
+    .product-image {
+        height: 230px;
+    }
+
+    .product-content {
+        padding: 15px;
+        min-height: 60px;
+    }
+
+    h4.text-uppercase {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .events-catalogue-heading {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .product-item {
+        height: 250px;
+    }
+
+    .product-image {
+        height: 190px;
+    }
+
+    .product-content {
+        padding: 10px;
+        min-height: 50px;
+    }
+
+    .product-content h5 a {
+        font-size: 1rem;
+    }
+}
+</style>
 
 <!--THIS IS THE EVENT SCHEDULE SECTION START-->
 <section class="schedule-section section-padding" id="section_4">
@@ -500,61 +656,50 @@
                     <table class="schedule-table table table-dark">
                         <thead>
                         <tr>
-                            <th scope="col">Month</th>
-                            <th scope="col">Event 1</th>
-                            <th scope="col">Event 2</th>
-                            <th scope="col">Event 3</th>
+                            <th colspan="3" class="text-center" style="font-size: 1.5rem; padding: 1rem;">
+                                OCTOBER
+                            </th>
+                        </tr>
+                        <tr style="background-color: #2a2a2a;">
+                            <th scope="col" style="background-color: #2a2a2a;">Event 1</th>
+                            <th scope="col" style="background-color: #2a2a2a;">Event 2</th>
+                            <th scope="col" style="background-color: #2a2a2a;">Event 3</th>
                         </tr>
                         </thead>
 
                         <tbody>
                         <tr>
-                            <th scope="row">January</th>
-                            <td class="table-background-image-wrap pop-background-image">
-                                <h3>Pop Night</h3>
-                                <p class="mb-2">Main Arena</p>
-                                <p>By Adele</p>
-                                <div class="section-overlay"></div>
+                            <td class="event-poster-cell">
+                                <div class="poster-container">
+                                    <h3>Pop Night</h3>
+                                    <div class="poster-placeholder">
+                                        <img src="{% static 'images/Kolacopia3.0EventPoster.jpg' %}" alt="Pop Night Poster" class="poster-image">
+                                    </div>
+                                    <p class="mb-2">MASSHOUSE</p>
+                                    <p>By KOLA</p>
+                                </div>
                             </td>
 
-                            <td style="background-color: #F3DCD4"></td>
-
-                            <td class="table-background-image-wrap rock-background-image">
-                                <h3>Rock & Roll</h3>
-                                <p class="mb-2">Concert Grounds</p>
-                                <p>By Rihanna</p>
-                                <div class="section-overlay"></div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row">February</th>
-                            <td style="background-color: #ECC9C7"></td>
-
-                            <td>
-                                <h3>DJ Night</h3>
-                                <p class="mb-2">Club Stage</p>
-                                <p>By Calvin Harris</p>
+                            <td class="event-poster-cell">
+                                <div class="poster-container">
+                                    <h3>DJ Night</h3>
+                                    <div class="poster-placeholder">
+                                        <img src="{% static 'images/PosterKolacopia_2.0.jpg' %}" alt="DJ Night Poster" class="poster-image">
+                                    </div>
+                                    <p class="mb-2">WINE TAILS</p>
+                                    <p>By WE WANNA PARTY</p>
+                                </div>
                             </td>
 
-                            <td style="background-color: #D9E3DA"></td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row">March</th>
-                            <td class="table-background-image-wrap country-background-image">
-                                <h3>Country Music</h3>
-                                <p class="mb-2">Open Field</p>
-                                <p>By Shania Twain</p>
-                                <div class="section-overlay"></div>
-                            </td>
-
-                            <td style="background-color: #D1CFC0"></td>
-
-                            <td>
-                                <h3>Free Styles</h3>
-                                <p class="mb-2">Street Stage</p>
-                                <p>By Local Members</p>
+                            <td class="event-poster-cell">
+                                <div class="poster-container">
+                                    <h3>Rock & Roll</h3>
+                                    <div class="poster-placeholder">
+                                        <img src="{% static 'images/ProjectKola (1).jpg' %}" alt="Rock & Roll Poster" class="poster-image">
+                                    </div>
+                                    <p class="mb-2">WINE TAILS</p>
+                                    <p>By KOLA</p>
+                                </div>
                             </td>
                         </tr>
                         </tbody>
@@ -564,69 +709,346 @@
         </div>
     </div>
 </section>
+
+<style>
+.event-poster-cell {
+    width: 33.33%;
+    vertical-align: top;
+    padding: 1rem;
+}
+
+.poster-container {
+    text-align: center;
+    height: 100%;
+}
+
+.poster-placeholder {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem auto;
+    background-color: #1a1a1a;
+    border: 2px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 3/4; /* Matches your 5400x7200 ratio (3:4) */
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .event-poster-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .poster-placeholder {
+        max-width: 300px;
+    }
+}
+</style>
 <!--THIS IS THE EVENT SCHEDULE SECTION END-->
 
 
 <!--THIS IS THE FOOTER SECTION START-->
-<footer>
+<footer class="custom-footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
-                <div class="first-item">
+            <!-- Company Info Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-brand">
                     <div class="logo">
-                        <img src="{% static 'images/KolaIncLogo.png' %} " alt="KOLA INC.">
+                        <img src="{% static 'images/KolaIncLogo.png' %}" alt="KOLA INC." class="footer-logo">
                     </div>
-                    <ul>
-                        <li><a href="#">NAIROBI</a></li>
-                        <li><a href="#">kolaincc@gmail.com</a></li>
-                        <li><a href="#">07xxxxxxxx</a></li>
+                    <p class="company-description">Creating unforgettable experiences through exceptional event planning and management.</p>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>NAIROBI, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:kolaincc@gmail.com">kolaincc@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0791575311">0791 575 311</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0716599748">0716 599 748</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <h4>Shopping &amp; Categories</h4>
-                <ul>
-                    <li><a href="#">Men’s Shopping</a></li>
-                    <li><a href="#">Women’s Shopping</a></li>
-                    <li><a href="#">Kid's Shopping</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li><a href="#">Homepage</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3">
-                <h4>Help &amp; Information</h4>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">FAQ's</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Tracking ID</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-12">
-                <div class="under-footer">
-                    <p>Copyright © 2025 KOLA INC., Ltd. All Rights Reserved.
 
-                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">Migzzz</a>
-                    </p>
+            <!-- Quick Links Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        <li><a href="{% url 'Home-page' %}"><i class="fas fa-home"></i> Homepage</a></li>
+                        <li><a href="{% url 'ContactUs-page' %}"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="{% url 'ContactUs-page' %}"><i class="fas fa-question-circle"></i> Help</a></li>
+                        <li><a href="{% url 'ContactUs-page' %}"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                        <li><a href="{% url 'AllTickets-page' %}"><i class="fas fa-calendar-alt"></i> Events</a></li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="newsletter-section">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest events and updates.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="subscribe-btn" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="social-links">
+                        <h5>Follow Us</h5>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/kola.incc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@kola.incc?_t=ZM-8uNXugdMGqj&_r=1"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>Copyright © 2025 KOLA INC., Ltd. All Rights Reserved.</p>
+                        <p class="design-credit">
+                            Design: <a href="https://www.instagram.com/mi._gguel?igsh=dDN6aTg0YzFraDhh" target="_blank">Migzzz.</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+.custom-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    padding: 60px 0 0;
+    margin-top: 50px;
+    border-top: 4px solid #e74c3c;
+}
+
+.footer-brand .footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.company-description {
+    color: #bdc3c7;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #ecf0f1;
+}
+
+.contact-info i {
+    color: #e74c3c;
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #e74c3c;
+}
+
+.footer-links h4,
+.newsletter-section h4 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.footer-links h4::after,
+.newsletter-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 50px;
+    height: 3px;
+    background: #e74c3c;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.footer-links a:hover {
+    color: #e74c3c;
+    transform: translateX(5px);
+}
+
+.footer-links i {
+    margin-right: 10px;
+    color: #e74c3c;
+    width: 20px;
+}
+
+.newsletter-section p {
+    color: #bdc3c7;
+    margin-bottom: 20px;
+}
+
+.newsletter-form .input-group {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.newsletter-form .form-control {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background: #34495e;
+    color: #ffffff;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: #bdc3c7;
+}
+
+.subscribe-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #c0392b;
+}
+
+.social-links h5 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #34495e;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #e74c3c;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.copyright {
+    color: #bdc3c7;
+}
+
+.design-credit a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.design-credit a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-footer {
+        padding: 40px 0 0;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .newsletter-section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-links h4::after,
+    .newsletter-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .contact-info li {
+        justify-content: center;
+    }
+}
+</style>
 <!--THIS IS THE FOOTER SECTION END-->
+
+<!-- Add Font Awesome for icons -->
 
 <!-- jQuery (only once) -->
 <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>

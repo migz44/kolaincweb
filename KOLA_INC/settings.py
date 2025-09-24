@@ -166,7 +166,7 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = BASE_DIR / 'assets'
 
-STATICFILES_DIRS = [BASE_DIR / "kola_app/kola_assets"]
+STATICFILES_DIRS = [BASE_DIR / "Kola_app/kola_assets"]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 

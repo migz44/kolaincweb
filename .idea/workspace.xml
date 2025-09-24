@@ -4,17 +4,248 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (2)">
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Kolacopia3.0EventPoster.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Kolacopia3.0Ticket.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/events/Kolacopia3.html" afterDir="false" />
+    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (3)">
+      <change afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/sample.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KOLA_INC/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/ajax-loader.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/bootstrap-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/bootstrap-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/flex-slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/flex-slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/lightbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/lightbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/owl-carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/owl-carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/swiper-bundle.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/swiper-bundle.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/templatemo-festava-live.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/templatemo-festava-live.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/templatemo-hexashop.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/templatemo-hexashop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/css/vendor.css" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/css/vendor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/Flaticon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/Flaticon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/bootstrap-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/bootstrap-icons.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/bootstrap-icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/bootstrap-icons.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/flexslider-icon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/flexslider-icon.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/flexslider-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/flexslider-icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/flexslider-icon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/flexslider-icon.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/flexslider-icon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/flexslider-icon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/slick.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/slick.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/slick.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/slick.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/slick.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/slick.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/fonts/slick.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/fonts/slick.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/AboutPhoto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/AboutPhoto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImageAccessories.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/BannerImageAccessories.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImageAccessories_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/BannerImageAccessories_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImageMen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/BannerImageMen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImageWomen.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/BannerImageWomen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/BannerImage_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/BannerImage_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY05.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY06.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY07.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY07.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY08.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY09.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY09.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/GLRY18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/GLRY18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/KOLACOPIA2.0TICKET.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/KOLACOPIA2.0TICKET.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/KOLACOPIATICKET.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/KOLACOPIATICKET.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/KolaIncLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/KolaIncLogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Kolacopia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/Kolacopia.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Kolacopia3.0EventPoster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/Kolacopia3.0EventPoster.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Kolacopia3.0Ticket.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/Kolacopia3.0Ticket.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Logo_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/Logo_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/MainBannerPic.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/MainBannerPic.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/MainBanner_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/MainBanner_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Men/Men_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/Men/Men_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Men/Men_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/Men/Men_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Men/Men_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/Men/Men_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NEWKOLAFOOTER_1-removebg-preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/NEWKOLAFOOTER_1-removebg-preview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NEWKOLAFOOTER_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/NEWKOLAFOOTER_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NEWKOLALOGO_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/NEWKOLALOGO_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NEWYEARCONCERTTICKET (1).png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/NEWYEARCONCERTTICKET (1).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/NewKolaLogo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/NewKolaLogo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/PROJECTKOLATICKET.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/PROJECTKOLATICKET.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/PosterKolacopia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/PosterKolacopia.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/PosterKolacopia_2.0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/PosterKolacopia_2.0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/ProjectKola (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/ProjectKola (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/ShoppingBag.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/ShoppingBag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/WeAreKola.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/WeAreKola.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/WeAreKolaMain.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/WeAreKolaMain.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/WeAreKola_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/WeAreKola_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/about-left-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/about-left-image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/about-us-page-heading.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/about-us-page-heading.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/abstral-official-bdlMO9z5yco-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/abstral-official-bdlMO9z5yco-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/arct-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/arct-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/DjKhaviza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/artists/DjKhaviza.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/DjZanela.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/artists/DjZanela.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/Dj_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/artists/Dj_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/baner-right-image-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/baner-right-image-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/baner-right-image-04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/baner-right-image-04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/banner-image-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/banner-image-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/banner-image-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/banner-image-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/banner-image-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/banner-image-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/banner-image-6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/bg-newsletter.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/bg-newsletter.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-item1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-item1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-item2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-item2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-item3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-item3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-large-item1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-large-item1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-large-item2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-large-item2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-large-item3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-large-item3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-sm-item.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-sm-item.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-sm-item2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-sm-item2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/cat-sm-item3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/cat-sm-item3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/collection-banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/collection-banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/dhl-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/dhl-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/edward-unsplash-blur.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/edward-unsplash-blur.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/explore-image-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/explore-image-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/explore-image-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/explore-image-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/for_accecories.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/for_accecories.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/for_accessories.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/for_accessories.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/for_women.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/for_women.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/front_face_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/front_face_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/front_face_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/front_face_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/front_face_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/front_face_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/front_face_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/img_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/insta-item1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/insta-item2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/insta-item3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/insta-item4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/insta-item5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/insta-item6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/insta-item6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/instagram-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/instagram-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/instagram-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/instagram-04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/instagram-05.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram-06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/instagram-06.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/instagram_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/instagram_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/joecalih-UmTZqmMvQcw-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/joecalih-UmTZqmMvQcw-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/kawkee_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/kawkee_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/kid-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/kid-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/kid-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/kid-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/kid-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/kid-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/light-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/light-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/main-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/main-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/master-card.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/master-card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/men-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/men-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/men-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/men-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/men-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/men-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/mpesa-logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/mpesa-logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/nainoa-shizuru-unsplash-blur.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/nainoa-shizuru-unsplash-blur.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/newsletter-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/newsletter-image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/next.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/next.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/nicholas-green-unsplash-blur.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/nicholas-green-unsplash-blur.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/pattern-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/pattern-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/paypal-card.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/paypal-card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/pexels-alexander-suhorucov-6457579.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/pexels-alexander-suhorucov-6457579.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/pinterest_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/pinterest_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-image9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-image9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-large-image1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-large-image1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-large-image2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-large-image2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-large-image3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-large-image3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-large-image4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-large-image4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-small-image1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-small-image1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-small-image2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-small-image2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/post-small-image3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/post-small-image3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/prev.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/prev.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/product-item-9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/product-item-9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/products-page-heading.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/products-page-heading.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/service-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/service-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/service-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/service-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/service-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/service-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/shopify_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/shopify_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/single-image-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/single-image-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/single-product-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/single-product-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/single-product-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/single-product-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/soundtrap-rAT6FJ6wltE-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/soundtrap-rAT6FJ6wltE-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/team-member-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/team-member-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/team-member-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/team-member-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/team-member-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/team-member-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/text-pattern.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/text-pattern.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/tiktok_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/tiktok_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/video-image-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/video-image-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/video-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/video-image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/visa-card.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/visa-card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/whatsapp_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/whatsapp_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/white-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/white-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/wishlist-item1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/wishlist-item1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/wishlist-item2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/wishlist-item2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/wishlist-item3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/wishlist-item3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/women-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/women-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/women-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/women-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/images/women-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/images/women-03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/SmoothScroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/SmoothScroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/accordions.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/accordions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/click-scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/click-scroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/imgfix.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/imgfix.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/isotope.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/isotope.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/jquery-2.1.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/jquery-2.1.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/jquery.counterup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/jquery.counterup.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/jquery.sticky.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/jquery.sticky.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/lightbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/modernizr.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/modernizr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/owl-carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/owl-carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/quantity.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/quantity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/script.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/scrollreveal.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/scrollreveal.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/slick.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/slick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/js/waypoints.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/js/waypoints.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/sounds/ScannerAlertFail.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/sounds/ScannerAlertFail.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/sounds/ScannerBeepSuccess.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/sounds/ScannerBeepSuccess.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/Kola_assets/videos/pexels-2022395.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/kola_assets/videos/pexels-2022395.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events/AllTickets.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/AllTickets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events/TicketStop.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/TicketStop.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +260,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -72,6 +304,7 @@
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Owner/PycharmProjects/KOLA_INC/Kola_app/Kola_assets/images",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -190,7 +423,7 @@
       <workItem from="1758185562266" duration="5095000" />
       <workItem from="1758469969082" duration="10507000" />
       <workItem from="1758623352502" duration="5071000" />
-      <workItem from="1758703937011" duration="2369000" />
+      <workItem from="1758703937011" duration="4892000" />
     </task>
     <task id="LOCAL-00001" summary="push (1)">
       <option name="closed" value="true" />
@@ -208,7 +441,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758187105076</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="push (3)">
+      <option name="closed" value="true" />
+      <created>1758706354403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758706354403</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +458,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push (1)" />
     <MESSAGE value="push (2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="push (2)" />
+    <MESSAGE value="push (3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="push (3)" />
   </component>
 </project>

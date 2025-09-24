@@ -22,6 +22,7 @@ urlpatterns = [
     path('Kolacopia', views.Kolacopia, name='Kolacopia-page'),
     path('Kolacopia2', views.Kolacopia2, name='Kolacopia2.0-page'),
     path('ProjectKola', views.ProjectKola, name='ProjectKola-page'),
+    path('Kolacopia3', views.Kolacopia3, name='Kolacopia3.0-page'),
     path('ContactUs', views.ContactUs, name='ContactUs-page'),
     path('test', views.test, name='test-page'),
 

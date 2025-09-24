@@ -239,46 +239,6 @@
                 <a class="btn custom-btn smoothscroll" href="#section_2">Let's begin</a>
             </div>
 
-            <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
-                <div class="date-wrap">
-                    <h5 class="text-white">
-                        <i class="custom-icon bi-clock me-2"></i>
-                        10 - 12<sup>th</sup>, Nov 2027
-                    </h5>
-                </div>
-
-                <div class="location-wrap mx-auto py-3 py-lg-0">
-                    <h5 class="text-white">
-                        <i class="custom-icon bi-geo-alt me-2"></i>
-                        NAIROBI
-                    </h5>
-                </div>
-
-                <div class="social-share">
-                    <ul class="social-icon d-flex align-items-center justify-content-center">
-                        <span class="text-white me-3">Share:</span>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link">
-                                <span class="bi-facebook"></span>
-                            </a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link">
-                                <span class="bi-twitter"></span>
-                            </a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="https://www.instagram.com/makenairobipartyagain?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                               class="social-icon-link">
-                                <span class="bi-instagram"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -297,7 +257,6 @@
   <div class="container">
     <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
       <h4 class="text-uppercase">UPCOMING EVENTS.</h4>
-      <a href="{% url 'AllTickets-page' %}" class="btn-link">View All Tickets</a>
     </div>
 
     <div class="row g-4">
@@ -356,280 +315,20 @@
       <div class="col-6 col-md-4 col-lg-3">
         <div class="product-item image-zoom-effect link-effect">
           <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/NEWYEARCONCERTTICKET (1).png' %}" alt="New Year Concert Ticket" class="product-image img-fluid">
+            <a href="{% url 'Kolacopia3.0-page' %}">
+              <img src="{% static 'images/Kolacopia3.0Ticket.jpg' %}" alt="New Year Concert Ticket" class="product-image img-fluid">
             </a>
             <div class="product-content text-center">
               <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">NEW YEAR TICKET</a>
+                <a href="{% url 'Kolacopia3.0-page' %}">KOLACOPIA 3.0</a>
               </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
+              <a href="{% url 'Kolacopia3.0-page' %}" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
             </div>
           </div>
         </div>
       </div>
 
     </div>
-      <section id="best-sellers" class="best-sellers py-5 position-relative overflow-hidden">
-  <div class="container">
-
-    <div class="row g-4">
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/KOLACOPIATICKET.jpg' %}" alt="KOLACOPIA Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">KOLACOPIA</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/KOLACOPIA2.0TICKET.jpg' %}" alt="KOLACOPIA 2.0 Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">KOLACOPIA 2.0</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/PROJECTKOLATICKET.jpg' %}" alt="PROJECT KOLA Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">PROJECT KOLA</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/NEWYEARCONCERTTICKET (1).png' %}" alt="New Year Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">NEW YEAR TICKET</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Custom Button Styling -->
-<style>
-  .btn-buy-ticket {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-  }
-
-  .btn-buy-ticket:hover {
-    background-color: #000;
-    color: #fff;
-  }
-</style>
-
-      <section id="best-sellers" class="best-sellers py-5 position-relative overflow-hidden">
-  <div class="container">
-
-    <div class="row g-4">
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/KOLACOPIATICKET.jpg' %}" alt="KOLACOPIA Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">KOLACOPIA</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/KOLACOPIA2.0TICKET.jpg' %}" alt="KOLACOPIA 2.0 Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">KOLACOPIA 2.0</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/PROJECTKOLATICKET.jpg' %}" alt="PROJECT KOLA Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">PROJECT KOLA</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/NEWYEARCONCERTTICKET (1).png' %}" alt="New Year Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">NEW YEAR TICKET</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Custom Button Styling -->
-<style>
-  .btn-buy-ticket {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-  }
-
-  .btn-buy-ticket:hover {
-    background-color: #000;
-    color: #fff;
-  }
-</style>
-
-      <section id="best-sellers" class="best-sellers py-5 position-relative overflow-hidden">
-  <div class="container">
-
-    <div class="row g-4">
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/KOLACOPIATICKET.jpg' %}" alt="KOLACOPIA Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">KOLACOPIA</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/KOLACOPIA2.0TICKET.jpg' %}" alt="KOLACOPIA 2.0 Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">KOLACOPIA 2.0</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/PROJECTKOLATICKET.jpg' %}" alt="PROJECT KOLA Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">PROJECT KOLA</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/NEWYEARCONCERTTICKET (1).png' %}" alt="New Year Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">NEW YEAR TICKET</a>
-              </h5>
-              <a href="../index.html" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 <!-- Custom Button Styling -->

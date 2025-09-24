@@ -56,6 +56,10 @@ def ProjectKola(request):
     return render(request, 'events/ProjectKola.html')
 
 
+def Kolacopia3(request):
+    return render(request, 'events/Kolacopia3.html')
+
+
 def ContactUs(request):
     return render(request, 'ContactUs.html')
 
@@ -858,3 +862,5 @@ def log_ticket_scan(request):
             "scan_id": log.id,
             "total_scans": total_scans
         })
+
+

@@ -32,9 +32,35 @@
     <link rel="stylesheet" href=" {% static 'css/owl-carousel.css' %}">
 
     <link rel="stylesheet" href=" {% static 'css/lightbox.css' %}">
+
+    <link href="{% static 'css/templatemo-festava-live.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+
+
 </head>
 
 <body class="homepage">
+
+<style>
+    .product-content {
+  text-align: center; /* Center everything inside product-content */
+}
+
+.product-content h5 a {
+  color: #000;             /* Make text black */
+  text-decoration: none;   /* Remove underline */
+  font-weight: 600;        /* Bold text */
+  display: inline-block;   /* Keeps it neat */
+}
+
+.product-content h5 a:hover {
+  color: #555;             /* Subtle hover effect */
+}
+
+</style>
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <defs>
         <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 15 15">
@@ -161,8 +187,6 @@
     </defs>
 </svg>
 
-<div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
-
 <!--THIS IS THE TOP NAVBAR-->
 <div class="nav">
     <nav class="navbar fixed-top bg-body-tertiary">
@@ -197,32 +221,127 @@
     </nav>
 </div>
 <!--THIS IS THE TOP NAVBAR-->
-<br>
-<br>
-<!-- ***** Second Banner Area Start ***** -->
-<section id="billboard" class="bg-light py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <h1 class="section-title text-center mt-4" data-aos="fade-up">K💋LA INC.</h1>
-            <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
-                <p>Kola is more than an events brand — it’s a movement. Rooted in Nairobi’s vibrant youth culture,
-                    we curate high-energy experiences that unite thousands through music, art, and community.
-                    With record-breaking events like Kolacopia and Project Kola, a thriving online presence,
-                    and the largest youth party network of its kind, Kola is redefining nightlife in Kenya
-                    and setting new standards for Gen Z entertainment.</p>
+
+<!--THIS IS THE LIVE HERO SECTION START-->
+<section class="hero-section" id="section_1">
+    <div class="section-overlay"></div>
+
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row">
+
+            <div class="col-12 mt-auto mb-5 text-center">
+                <small>POWERED BY KOLA INC.</small>
+
+                <h1 class="text-white mb-5">KOLACOPIA 3.0</h1>
+
+            </div>
+
+            <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                <div class="date-wrap">
+                    <h5 class="text-white">
+                        <i class="custom-icon bi-clock me-2"></i>
+                         22<sup>th</sup>, Nov 2025
+                    </h5>
+                </div>
+
+                <div class="location-wrap mx-auto py-3 py-lg-0">
+                    <h5 class="text-white">
+                        <i class="custom-icon bi-geo-alt me-2"></i>
+                        MASSHOUSE
+                    </h5>
+                </div>
+
+                <div class="social-share">
+                    <ul class="social-icon d-flex align-items-center justify-content-center">
+                        <span class="text-white me-3">Share:</span>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-facebook"></span>
+                            </a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-twitter"></span>
+                            </a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="https://www.instagram.com/makenairobipartyagain?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                               class="social-icon-link">
+                                <span class="bi-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
 
+    <div class="video-wrap">
+        <video autoplay="" loop="" muted="" class="custom-video" poster="">
+            <source src="{% static 'videos/pexels-2022395.mp4' %}" type="video/mp4">
+
+            Your browser does not support the video tag.
+        </video>
     </div>
 </section>
-<!-- ***** Second Banner Area End ***** -->
+<!--THIS IS THE LIVE HERO SECTION END-->
+
+<!-- ***** Third Banner Area Start ***** -->
+<section class="features py-5">
+        <div class="section-overlay"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="0">
+                <div class="py-5">
+                    <svg width="38" height="38" viewBox="0 0 24 24">
+                        <use xlink:href="#calendar"></use>
+                    </svg>
+                    <h4 class="element-title text-capitalize my-3">Our Upcoming Events.</h4>
+                    <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
+                </div>
+            </div>
+            <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="300">
+                <div class="py-5">
+                    <svg width="38" height="38" viewBox="0 0 24 24">
+                        <use xlink:href="#shopping-bag"></use>
+                    </svg>
+                    <h4 class="element-title text-capitalize my-3">Our Online Store.</h4>
+                    <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
+                </div>
+            </div>
+            <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="600">
+                <div class="py-5">
+                    <svg width="38" height="38" viewBox="0 0 24 24">
+                        <use xlink:href="#gift"></use>
+                    </svg>
+                    <h4 class="element-title text-capitalize my-3">Special packaging</h4>
+                    <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
+                </div>
+            </div>
+            <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="900">
+                <div class="py-5">
+                    <svg width="38" height="38" viewBox="0 0 24 24">
+                        <use xlink:href="#arrow-cycle"></use>
+                    </svg>
+                    <h4 class="element-title text-capitalize my-3">24 HR Service</h4>
+                    <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- ***** Third Banner Area End ***** -->
 
 
-
+<!-- ***** THIS IS THE ABOUT EVENTS SECTION START  ***** -->
 <section class="collection bg-light position-relative py-5">
     <div class="container">
         <div class="row">
-            <div class="title-xlarge text-uppercase txt-fx domino">UPCOMING EVENTS</div>
             <div class="collection-item d-flex flex-wrap my-5">
                 <div class="col-md-6 column-container">
                     <div class="image-holder">
@@ -237,111 +356,221 @@
                             The unstoppable Kamo Mphela is coming through with her amapiano heat,
                             alongside top DJs, massive vibes, and a crowd that knows how to party.
                             This isn’t just an event — it’s the night everyone will be talking about.</p>
-                        <a href="#" class="btn btn-dark text-uppercase mt-3">BUY TICKETS</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- ***** THIS IS THE ABOUT EVENTS SECTION END ***** -->
 
-<section id="best-sellers" class="best-sellers py-5 position-relative overflow-hidden">
-  <div class="container">
-    <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-      <h4 class="text-uppercase">UPCOMING EVENTS.</h4>
-      <a href="{% url 'AllTickets-page' %}" class="btn-link">View All Tickets</a>
+<!--THIS IS THE ARTIST SECTION START-->
+<section class="artists-section section-padding" id="section_3">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-12 text-center">
+                    <h4 class="mb-4">MEET THE CURRENT IN-FORM PERFORMERS IN KENYA</h4>
+                </div>
+
+                <div class="col-lg-5 col-12">
+                    <div class="artists-thumb">
+                        <div class="artists-image-wrap">
+                            <img src="{% static 'images/artists/DjKhaviza.jpg' %}"
+                                 class="artists-image img-fluid">
+                        </div>
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                Dj Khaviza
+                            </p>
+
+                            <p>
+                                <strong>Lorem:</strong>
+                                Lorem
+                            </p>
+
+                            <p>
+                                <strong>Music:</strong>
+                                Pop, R&amp;B
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Instagram:</strong>
+                                <a href="#">MIgzzzzz</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-12">
+                    <div class="artists-thumb">
+                        <div class="artists-image-wrap">
+                            <img src="{% static 'images/artists/Dj_2.jpg' %}"
+                                 class="artists-image img-fluid">
+                        </div>
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                Rihana
+                            </p>
+
+                            <p>
+                                <strong>Birthdate:</strong>
+                                Feb 20, 1988
+                            </p>
+
+                            <p>
+                                <strong>Music:</strong>
+                                Country
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Youtube Channel:</strong>
+                                <a href="#">Rihana Official</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="artists-thumb">
+                        <img src="{% static 'images/artists/DjZanela.jpg' %}"
+                             class="artists-image img-fluid">
+
+                        <div class="artists-hover">
+                            <p>
+                                <strong>Name:</strong>
+                                Bruno Bros
+                            </p>
+
+                            <p>
+                                <strong>Birthdate:</strong>
+                                October 8, 1985
+                            </p>
+
+                            <p>
+                                <strong>Music:</strong>
+                                Pop
+                            </p>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <strong>Youtube Channel:</strong>
+                                <a href="#">Bruno Official</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!--THIS IS THE ARTIST SECTION END-->
+
+
+<!--THIS IS THE EVENT SCHEDULE SECTION START-->
+<section class="schedule-section section-padding" id="section_4">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 text-center">
+                <h2 class="text-white mb-4">Event Schedule</h2>
+
+                <div class="table-responsive">
+                    <table class="schedule-table table table-dark">
+                        <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+
+                            <th scope="col">Wednesday</th>
+
+                            <th scope="col">Thursday</th>
+
+                            <th scope="col">Friday</th>
+
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <th scope="row">Day 1</th>
+
+                            <td class="table-background-image-wrap pop-background-image">
+                                <h3>Pop Night</h3>
+
+                                <p class="mb-2">5:00 - 7:00 PM</p>
+
+                                <p>By Adele</p>
+
+                                <div class="section-overlay"></div>
+                            </td>
+
+                            <td style="background-color: #F3DCD4"></td>
+
+                            <td class="table-background-image-wrap rock-background-image">
+                                <h3>Rock & Roll</h3>
+
+                                <p class="mb-2">7:00 - 11:00 PM</p>
+
+                                <p>By Rihana</p>
+
+                                <div class="section-overlay"></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Day 2</th>
+
+                            <td style="background-color: #ECC9C7"></td>
+
+                            <td>
+                                <h3>DJ Night</h3>
+
+                                <p class="mb-2">6:30 - 9:30 PM</p>
+
+                                <p>By Rihana</p>
+                            </td>
+
+                            <td style="background-color: #D9E3DA"></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Day 3</th>
+
+                            <td class="table-background-image-wrap country-background-image">
+                                <h3>Country Music</h3>
+
+                                <p class="mb-2">4:30 - 7:30 PM</p>
+
+                                <p>By Rihana</p>
+
+                                <div class="section-overlay"></div>
+                            </td>
+
+                            <td style="background-color: #D1CFC0"></td>
+
+                            <td>
+                                <h3>Free Styles</h3>
+
+                                <p class="mb-2">6:00 - 10:00 PM</p>
+
+                                <p>By Members</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="row g-4">
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="../index.html">
-              <img src="{% static 'images/KOLACOPIATICKET.jpg' %}" alt="KOLACOPIA Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="{% url 'Kolacopia-page' %}">KOLACOPIA</a>
-              </h5>
-              <a href="{% url 'Kolacopia-page' %}" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="{% url 'Kolacopia2.0-page' %}">
-              <img src="{% static 'images/KOLACOPIA2.0TICKET.jpg' %}" alt="KOLACOPIA 2.0 Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">KOLACOPIA 2.0</a>
-              </h5>
-              <a href="{% url 'Kolacopia2.0-page' %}" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="{% url 'ProjectKola-page' %}">
-              <img src="{% static 'images/PROJECTKOLATICKET.jpg' %}" alt="PROJECT KOLA Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="../index.html">PROJECT KOLA</a>
-              </h5>
-              <a href="{% url 'ProjectKola-page' %}" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product Item -->
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="product-item image-zoom-effect link-effect">
-          <div class="image-holder">
-            <a href="{% url 'Kolacopia3.0-page' %}">
-              <img src="{% static 'images/Kolacopia3.0Ticket.jpg' %}" alt="New Year Concert Ticket" class="product-image img-fluid">
-            </a>
-            <div class="product-content text-center">
-              <h5 class="text-uppercase fs-5 mt-3">
-                <a href="{% url 'Kolacopia3.0-page' %}">KOLACOPIA 3.0</a>
-              </h5>
-              <a href="{% url 'Kolacopia3.0-page' %}" class="btn btn-buy-ticket mt-2 w-100">BUY TICKET</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </section>
-
-<!-- Custom Button Styling -->
-<style>
-  .btn-buy-ticket {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-  }
-
-  .btn-buy-ticket:hover {
-    background-color: #000;
-    color: #fff;
-  }
-</style>
-
+<!--THIS IS THE EVENT SCHEDULE SECTION END-->
 
 <!--THIS IS THE FOOTER SECTION START-->
 <footer>
@@ -403,12 +632,14 @@
     </div>
 </footer>
 <!--THIS IS THE FOOTER SECTION END-->
-<!-- jQuery -->
+
+<!-- jQuery (only once) -->
 <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
 
-<!-- Bootstrap -->
-<script src="{% static 'js/popper.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 
 <!-- Plugins -->
 <script src="{% static 'js/owl-carousel.js' %}"></script>
@@ -421,14 +652,14 @@
 <script src="{% static 'js/slick.js' %}"></script>
 <script src="{% static 'js/lightbox.js' %}"></script>
 <script src="{% static 'js/isotope.js' %}"></script>
-<script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/plugins.js' %}"></script>
 <script src="{% static 'js/SmoothScroll.js' %}"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="{% static 'js/script.min.js' %}"></script>
-</body>
 
+<!-- Custom Scripts -->
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/script.min.js' %}"></script>
+
+
+</body>
 </html>

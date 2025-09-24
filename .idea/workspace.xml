@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (2)">
-      <change afterPath="$PROJECT_DIR$/templates/admin/MainAdminDashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/event_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Kolacopia3.0EventPoster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kola_app/Kola_assets/images/Kolacopia3.0Ticket.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/events/Kolacopia3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KOLA_INC/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kola_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm4.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm5.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/events/AllTickets.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/AllTickets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/events/TicketStop.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/TicketStop.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,42 +55,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.KOLA_INC.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Kolacopia.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.TicketForm.html.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\Owner\\AppData\\Roaming\\JetBrains\\PyCharm2025.1\\plugins\\Shell Script\\shellcheck.exe&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Owner/PycharmProjects/KOLA_INC/templates&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.KOLA_INC.executor": "Run",
+    "JavaScript Debug.Kolacopia.html.executor": "Run",
+    "JavaScript Debug.TicketForm.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "C:\\Users\\Owner\\AppData\\Roaming\\JetBrains\\PyCharm2025.1\\plugins\\Shell Script\\shellcheck.exe",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Owner/PycharmProjects/KOLA_INC/Kola_app/Kola_assets/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\images" />
       <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\templates" />
       <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\sounds" />
-      <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\images" />
       <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\assets\images" />
       <recent name="C:\Users\Owner\PycharmProjects\KOLA_INC\Kola_app\Kola_assets\images\Men" />
     </key>
@@ -193,7 +189,8 @@
       <workItem from="1758184911121" duration="10000" />
       <workItem from="1758185562266" duration="5095000" />
       <workItem from="1758469969082" duration="10507000" />
-      <workItem from="1758623352502" duration="3103000" />
+      <workItem from="1758623352502" duration="5071000" />
+      <workItem from="1758703937011" duration="2369000" />
     </task>
     <task id="LOCAL-00001" summary="push (1)">
       <option name="closed" value="true" />

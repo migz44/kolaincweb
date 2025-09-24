@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (4)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/0002_payment_ticket_event_ticket_event_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/sitemaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/sitemaps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +189,7 @@
       <workItem from="1758185562266" duration="5095000" />
       <workItem from="1758469969082" duration="10507000" />
       <workItem from="1758623352502" duration="5071000" />
-      <workItem from="1758703937011" duration="24705000" />
+      <workItem from="1758703937011" duration="26827000" />
     </task>
     <task id="LOCAL-00001" summary="push (1)">
       <option name="closed" value="true" />
@@ -241,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758747498708</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="push (4)">
+      <option name="closed" value="true" />
+      <created>1758748292262</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758748292262</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

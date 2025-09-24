@@ -20,6 +20,9 @@ from .models import TicketScanLog
 from .models import Ticket, TicketScan, Payment
 
 
+
+
+
 def index(request):
     return render(request, 'index.html')
 

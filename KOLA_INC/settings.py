@@ -23,11 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#pimqk*jzhzi&j=mbsj)%%5xx#^b^)gb!+s(tcdjik&ues=gej'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [
-'*'
-]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kolainc.africa', 'www.kolainc.africa']
 
 CSRF_TRUSTED_ORIGINS = [
   'https://*.kolainc.com',

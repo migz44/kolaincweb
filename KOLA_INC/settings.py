@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-#pimqk*jzhzi&j=mbsj)%%5xx#^b^)gb!+s(tcdjik&ues=gej
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kolainc.africa', 'www.kolainc.africa']
-
+ALLOWED_HOSTS = ['*']
+# '127.0.0.1', 'localhost', 'kolainc.africa', 'www.kolainc.africa'
 CSRF_TRUSTED_ORIGINS = [
   'https://*.kolainc.com',
 ]
@@ -84,28 +84,28 @@ WSGI_APPLICATION = 'KOLA_INC.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': os.getenv('DB_NAME', 'kolaapp'),
-#         'USER': os.getenv('DB_USER', 'root'),
-#         'PASSWORD': os.getenv('DB_PASSWORD', ''),
-#         'HOST': os.getenv('DB_HOST', 'localhost'),
-#         'PORT': os.getenv('DB_PORT', '3306'),
-#     }
-# }
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME', 'kolaincDB'),
-        'USER': os.getenv('DB_USER', 'kolaincUser'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'alokcni'),
-        'HOST': os.getenv('DB_HOST', 'db'),
-        'PORT': os.getenv('DB_PORT', '3307'),
+        'NAME': os.getenv('DB_NAME', 'kolaapp'),
+        'USER': os.getenv('DB_USER', 'root'),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '3306'),
     }
 }
+
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.getenv('DB_NAME', 'kolaincDB'),
+#         'USER': os.getenv('DB_USER', 'kolaincUser'),
+#         'PASSWORD': os.getenv('DB_PASSWORD', 'alokcni'),
+#         'HOST': os.getenv('DB_HOST', 'db'),
+#         'PORT': os.getenv('DB_PORT', '3307'),
+#     }
+# }
 
 # docker compose up
 
@@ -151,7 +151,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 

@@ -1,83 +1,378 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Scan Logs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Scanner</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .scanner-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: #1e1e1e;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    #qr-reader {
+      width: 100%;
+      border: none;
+      position: relative;
+    }
+
+    #qr-reader video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .scanner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .scanner-overlay .corner {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 5px solid white;
+    }
+
+    .scanner-overlay .top-left {
+      top: 20px;
+      left: 20px;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .scanner-overlay .top-right {
+      top: 20px;
+      right: 20px;
+      border-left: none;
+      border-bottom: none;
+    }
+
+    .scanner-overlay .bottom-left {
+      bottom: 20px;
+      left: 20px;
+      border-right: none;
+      border-top: none;
+    }
+
+    .scanner-overlay .bottom-right {
+      bottom: 20px;
+      right: 20px;
+      border-left: none;
+      border-top: none;
+    }
+
+    .scanner-overlay .laser {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background-color: #ff4757;
+      box-shadow: 0 0 10px #ff4757;
+      animation: scan 2s infinite linear;
+      display: none; /* Hidden by default, shown when scanning */
+    }
+
+    @keyframes scan {
+      0% { top: 10%; }
+      50% { top: 90%; }
+      100% { top: 10%; }
+    }
+
+    #scan-result-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      z-index: 10;
+    }
+
+    #scan-result-overlay.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scan-result-overlay.success {
+      background-color: rgba(40, 167, 69, 0.85);
+    }
+
+    #scan-result-overlay.error {
+      background-color: rgba(220, 53, 69, 0.85);
+    }
+
+    #scan-result-overlay .icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .accordion-button {
+        background-color: #343a40;
+        color: #fff;
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: #495057;
+        color: #fff;
+    }
+    .accordion-body {
+        background-color: #212529;
+    }
+
+  </style>
 </head>
 <body>
-<div class="container mt-4">
-  <h3><i class="bi bi-clipboard-data"></i> Ticket Scan Logs</h3>
 
-  <!-- Stats -->
-  <div class="row mb-3">
-    <div class="col-md-4">
-      <div class="card bg-light">
-        <div class="card-body text-center">
-          <h5>Total Scans</h5>
-          <p class="fs-4 fw-bold">{{ stats.total_scans }}</p>
-        </div>
-      </div>
+<div class="container py-4">
+  <div class="scanner-container">
+    <div id="qr-reader"></div>
+    <div class="scanner-overlay">
+      <div class="corner top-left"></div>
+      <div class="corner top-right"></div>
+      <div class="corner bottom-left"></div>
+      <div class="corner bottom-right"></div>
+      <div class="laser"></div>
     </div>
-    <div class="col-md-4">
-      <div class="card bg-light">
-        <div class="card-body text-center">
-          <h5>Scans Today</h5>
-          <p class="fs-4 fw-bold">{{ stats.today_scans }}</p>
-        </div>
-      </div>
+    <div id="scan-result-overlay">
+      <div id="scan-result-icon" class="icon"></div>
+      <div id="scan-result-message"></div>
     </div>
-    <div class="col-md-4">
-      <div class="card bg-light">
-        <div class="card-body text-center">
-          <h5>This Week</h5>
-          <p class="fs-4 fw-bold">{{ stats.week_scans }}</p>
+  </div>
+
+  <div class="text-center mb-4">
+    <button id="start-scan-btn" class="btn btn-primary btn-lg"><i class="bi bi-camera-video"></i> Start Camera Scan</button>
+  </div>
+
+  <div class="accordion" id="logs-accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <i class="bi bi-clipboard-data me-2"></i> Show Logs & Statistics
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#logs-accordion">
+        <div class="accordion-body">
+          <!-- Stats -->
+          <div class="row mb-3">
+            <div class="col-lg-4 col-md-6 col-12 mb-3">
+              <div class="card bg-dark text-white">
+                <div class="card-body text-center">
+                  <h5>Total Scans</h5>
+                  <p class="fs-4 fw-bold">{{ stats.total_scans }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-3">
+              <div class="card bg-dark text-white">
+                <div class="card-body text-center">
+                  <h5>Scans Today</h5>
+                  <p class="fs-4 fw-bold">{{ stats.today_scans }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12 mb-3">
+              <div class="card bg-dark text-white">
+                <div class="card-body text-center">
+                  <h5>This Week</h5>
+                  <p class="fs-4 fw-bold">{{ stats.week_scans }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filters -->
+          <form method="get" class="row mb-4">
+            <div class="col-md-3 mb-2">
+              <input type="date" name="start_date" value="{{ request.GET.start_date }}" class="form-control" placeholder="Start Date">
+            </div>
+            <div class="col-md-3 mb-2">
+              <input type="date" name="end_date" value="{{ request.GET.end_date }}" class="form-control" placeholder="End Date">
+            </div>
+            <div class="col-md-3 mb-2">
+              <input type="text" name="scanned_by" value="{{ request.GET.scanned_by }}" class="form-control" placeholder="Scanned By">
+            </div>
+            <div class="col-md-3 mb-2">
+              <button class="btn btn-primary w-100" type="submit"><i class="bi bi-filter"></i> Filter</button>
+            </div>
+          </form>
+
+          <!-- Logs table -->
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Ticket Code</th>
+                  <th>Scanned By</th>
+                  <th>Scanned At</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for log in logs %}
+                <tr>
+                  <td>{{ forloop.counter }}</td>
+                  <td>{{ log.ticket.unique_code }}</td>
+                  <td>{{ log.scanned_by }}</td>
+                  <td>{{ log.scanned_at|date:"Y-m-d H:i" }}</td>
+                  <td>
+                    {% if log.status == 'success' %}
+                      <span class="badge bg-success">Success</span>
+                    {% elif log.status == 'duplicate' %}
+                      <span class="badge bg-warning text-dark">Duplicate</span>
+                    {% else %}
+                      <span class="badge bg-danger">Failed</span>
+                    {% endif %}
+                  </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="text-center text-muted">No logs found</td></tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Filters -->
-  <form method="get" class="row mb-4">
-    <div class="col-md-3">
-      <input type="date" name="start_date" value="{{ request.GET.start_date }}" class="form-control" placeholder="Start Date">
-    </div>
-    <div class="col-md-3">
-      <input type="date" name="end_date" value="{{ request.GET.end_date }}" class="form-control" placeholder="End Date">
-    </div>
-    <div class="col-md-3">
-      <input type="text" name="scanned_by" value="{{ request.GET.scanned_by }}" class="form-control" placeholder="Scanned By">
-    </div>
-    <div class="col-md-3">
-      <button class="btn btn-primary w-100" type="submit"><i class="bi bi-filter"></i> Filter</button>
-    </div>
-  </form>
-
-  <!-- Logs table -->
-  <table class="table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Ticket Code</th>
-        <th>Scanned By</th>
-        <th>Scanned At</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for log in logs %}
-      <tr>
-        <td>{{ forloop.counter }}</td>
-        <td>{{ log.ticket.code }}</td>
-        <td>{{ log.scanned_by }}</td>
-        <td>{{ log.scanned_at|date:"Y-m-d H:i" }}</td>
-      </tr>
-      {% empty %}
-      <tr><td colspan="4" class="text-center text-muted">No logs found</td></tr>
-      {% endfor %}
-    </tbody>
-  </table>
 </div>
+
+<!-- Audio files -->
+<audio id="success-sound" src="{% static 'sounds/ScannerBeepSuccess.mp3' %}" preload="auto"></audio>
+<audio id="error-sound" src="{% static 'sounds/ScannerAlertFail.mp3' %}" preload="auto"></audio>
+
+<!-- JS Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
+<script>
+  const scanResultOverlay = document.getElementById('scan-result-overlay');
+  const scanResultMessage = document.getElementById('scan-result-message');
+  const scanResultIcon = document.getElementById('scan-result-icon');
+  const successSound = document.getElementById('success-sound');
+  const errorSound = document.getElementById('error-sound');
+  const laser = document.querySelector('.scanner-overlay .laser');
+  const apiUrl = '/api/validate_ticket/';
+  let validationCooldown = false;
+
+  function showValidationResult(data) {
+    scanResultMessage.textContent = data.message;
+    scanResultOverlay.classList.remove('success', 'error');
+
+    if (data.status === 'success') {
+      scanResultOverlay.classList.add('success');
+      scanResultIcon.className = 'icon bi bi-check-circle';
+      successSound.play();
+      if (navigator.vibrate) navigator.vibrate([100, 50, 100]);
+    } else {
+      scanResultOverlay.classList.add('error');
+      scanResultIcon.className = 'icon bi bi-x-octagon';
+      errorSound.play();
+      if (navigator.vibrate) navigator.vibrate(300);
+    }
+
+    scanResultOverlay.classList.add('visible');
+
+    setTimeout(() => {
+      scanResultOverlay.classList.remove('visible');
+    }, 3000);
+  }
+
+  function validateTicketCode(code) {
+    if (!code || validationCooldown) return;
+    validationCooldown = true;
+
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': '{{ csrf_token }}'
+      },
+      body: JSON.stringify({ code: code })
+    })
+    .then(response => response.json())
+    .then(showValidationResult)
+    .catch(error => {
+      console.error('Error:', error);
+      showValidationResult({ status: 'error', message: 'Network error. Please try again.' });
+    })
+    .finally(() => {
+      setTimeout(() => { validationCooldown = false; }, 1500); // Cooldown to prevent rapid-fire scans
+    });
+  }
+
+  const startScanBtn = document.getElementById('start-scan-btn');
+  const qrReaderDiv = document.getElementById('qr-reader');
+  const html5QrCode = new Html5Qrcode("qr-reader");
+  let isScanning = false;
+
+  const qrCodeSuccessCallback = (decodedText, decodedResult) => {
+    if (isScanning) {
+      validateTicketCode(decodedText);
+    }
+  };
+
+  const config = { fps: 10, qrbox: { width: 250, height: 250 }, rememberedStates: true, aspectRatio: 1.0 };
+
+  startScanBtn.addEventListener('click', () => {
+    if (!isScanning) {
+      qrReaderDiv.style.display = 'block';
+      html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback)
+        .then(() => {
+          startScanBtn.innerHTML = '<i class="bi bi-stop-circle"></i> Stop Camera Scan';
+          startScanBtn.classList.replace('btn-primary', 'btn-danger');
+          laser.style.display = 'block';
+          isScanning = true;
+        })
+        .catch(err => {
+          console.error("Failed to start QR scanner", err);
+          qrReaderDiv.innerHTML = `<div class="alert alert-danger">Could not start camera. Please grant permissions and refresh.</div>`;
+        });
+    } else {
+      html5QrCode.stop()
+        .then(ignore => {
+          startScanBtn.innerHTML = '<i class="bi bi-camera-video"></i> Start Camera Scan';
+          startScanBtn.classList.replace('btn-danger', 'btn-primary');
+          laser.style.display = 'none';
+          isScanning = false;
+        })
+        .catch(err => {
+          console.error("Failed to stop QR scanner", err);
+        });
+    }
+  });
+
+</script>
+
 </body>
 </html>

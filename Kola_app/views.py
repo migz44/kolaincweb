@@ -1,4 +1,5 @@
 from io import BytesIO
+import json
 
 import qrcode
 from django.conf import settings
@@ -6,7 +7,6 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.core.mail import EmailMultiAlternatives
 from django.db import transaction
 from django.db.models import Count, Sum, Q, Avg
-from django.db.models.fields import json
 from django.http import Http404, JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -15,11 +15,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django_daraja.mpesa.core import MpesaClient
 from rest_framework.decorators import api_view
-from django.http import JsonResponse
+
 from .models import TicketScanLog
 from .models import Ticket, TicketScan, Payment
-
-
 
 
 
@@ -108,7 +106,7 @@ def TicketForm(request):
 
         # Send email with attachments
         email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
-        email_body = f"""
+        email_body = f'''
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
                 <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
                 <p style="margin-top:0; color:#333;">
@@ -117,7 +115,7 @@ def TicketForm(request):
                 </p>
                 <p style="font-size:12px; color:#999; margin-top:12px;">Total paid: KES {purchase_total}</p>
             </div>
-        """
+        '''
 
         msg = EmailMultiAlternatives(
             subject=email_subject,
@@ -155,7 +153,6 @@ def TicketForm(request):
 
     return render(request, 'ticket_forms/TicketForm.html')
 
-
 def TicketForm2(request):
     if request.method == "POST":
         full_name = request.POST.get('ticket-form-name')
@@ -192,7 +189,7 @@ def TicketForm2(request):
             created_tickets.append(t)
         # Send email with attachments
         email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
-        email_body = f"""
+        email_body = f'''
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
                 <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
                 <p style="margin-top:0; color:#333;">
@@ -201,7 +198,7 @@ def TicketForm2(request):
                 </p>
                 <p style="font-size:12px; color:#999; margin-top:12px;">Total paid: KES {purchase_total}</p>
             </div>
-        """
+        '''
 
         msg = EmailMultiAlternatives(
             subject=email_subject,
@@ -238,7 +235,6 @@ def TicketForm2(request):
         return redirect(f"{success_url}?count={number_of_tickets}")
 
     return render(request, 'ticket_forms/TicketForm2.html')
-
 
 def TicketForm3(request):
     if request.method == "POST":
@@ -277,7 +273,7 @@ def TicketForm3(request):
 
         # Send email with attachments
         email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
-        email_body = f"""
+        email_body = f'''
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
                 <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
                 <p style="margin-top:0; color:#333;">
@@ -286,7 +282,7 @@ def TicketForm3(request):
                 </p>
                 <p style="font-size:12px; color:#999; margin-top:12px;">Total paid: KES {purchase_total}</p>
             </div>
-        """
+        '''
 
         msg = EmailMultiAlternatives(
             subject=email_subject,
@@ -323,7 +319,6 @@ def TicketForm3(request):
         return redirect(f"{success_url}?count={number_of_tickets}")
 
     return render(request, 'ticket_forms/TicketForm3.html')
-
 
 def TicketForm4(request):
     if request.method == "POST":
@@ -362,7 +357,7 @@ def TicketForm4(request):
 
         # Send email with attachments
         email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
-        email_body = f"""
+        email_body = f'''
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
                 <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
                 <p style="margin-top:0; color:#333;">
@@ -371,7 +366,7 @@ def TicketForm4(request):
                 </p>
                 <p style="font-size:12px; color:#999; margin-top:12px;">Total paid: KES {purchase_total}</p>
             </div>
-        """
+        '''
 
         msg = EmailMultiAlternatives(
             subject=email_subject,
@@ -408,7 +403,6 @@ def TicketForm4(request):
         return redirect(f"{success_url}?count={number_of_tickets}")
 
     return render(request, 'ticket_forms/TicketForm4.html')
-
 
 def TicketForm5(request):
     if request.method == "POST":
@@ -447,7 +441,7 @@ def TicketForm5(request):
 
         # Send email with attachments
         email_subject = "🎉 Your Tickets for WeWannaParty 🎉"
-        email_body = f"""
+        email_body = f'''
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 18px;">
                 <h2 style="color:#28a745; margin-bottom:6px;">🎉 Congratulations {full_name}! 🎉</h2>
                 <p style="margin-top:0; color:#333;">
@@ -456,7 +450,7 @@ def TicketForm5(request):
                 </p>
                 <p style="font-size:12px; color:#999; margin-top:12px;">Total paid: KES {purchase_total}</p>
             </div>
-        """
+        '''
 
         msg = EmailMultiAlternatives(
             subject=email_subject,
@@ -494,13 +488,12 @@ def TicketForm5(request):
     return render(request, 'ticket_forms/TicketForm5.html')
 
 
-
 def triggerSTK(phone, amount):
     cl = MpesaClient()
     phone_number = phone
     account_reference = 'reference'
     transaction_desc = 'Payment of the amazing show'
-    callback_url = 'https://frog-knowing-mole.ngrok-free.app/call-back/ggdudud/ggfsg'
+    callback_url = 'https://kolainc.africa/result-data/ggdudud/ggfsg'
     response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
     mrid = getattr(response, 'merchant_request_id')
     # mrid = response.merchant_request_id
@@ -511,7 +504,43 @@ def triggerSTK(phone, amount):
 
 
 def Scanner(request):
-    return render(request, 'scanner/Scanner.html')
+    """
+    Handles the scanner page, which shows scan statistics, allows for scanning
+    tickets, and displays a filterable log of recent scans.
+    """
+    now = timezone.now()
+    today = now.date()
+    # Sunday is 6, Monday is 0.
+    week_start = today - timezone.timedelta(days=today.weekday())
+
+    # Calculate statistics
+    stats = {
+        'total_scans': TicketScan.objects.count(),
+        'today_scans': TicketScan.objects.filter(scanned_at__date=today).count(),
+        'week_scans': TicketScan.objects.filter(scanned_at__date__gte=week_start).count(),
+    }
+
+    # Filter logs, order by most recent
+    logs = TicketScan.objects.select_related('ticket').order_by('-scanned_at')
+
+    # Get filter parameters from request
+    start_date = request.GET.get('start_date')
+    end_date = request.GET.get('end_date')
+    scanned_by = request.GET.get('scanned_by', '').strip()
+
+    if start_date:
+        logs = logs.filter(scanned_at__date__gte=start_date)
+    if end_date:
+        logs = logs.filter(scanned_at__date__lte=end_date)
+    if scanned_by:
+        logs = logs.filter(scanned_by__icontains=scanned_by)
+
+    context = {
+        'stats': stats,
+        'logs': logs,
+        'request': request, # Pass request to access GET params in template
+    }
+    return render(request, 'scanner/Scanner.html', context)
 
 
 # --- User-facing: Check ticket status via UUID (GET - Safe) ---
@@ -781,8 +810,6 @@ def handleMpesaResponse(request):
     return JsonResponse({'success': 'Received'})
 
 
-# views.py (add this new view)
-
 @csrf_exempt
 @require_http_methods(["POST"])
 def api_validate_ticket(request):
@@ -790,48 +817,41 @@ def api_validate_ticket(request):
     NEW: Modern API endpoint for the scanner.
     Expects a JSON payload: {'code': 'ABC123DEF'}
     """
-    # Check if request contains JSON data
     if not request.body:
         return JsonResponse({'status': 'error', 'message': 'No data received.'}, status=400)
 
     try:
         data = json.loads(request.body)
-        scanned_code = data.get('code', '').strip().upper() # Get code from JSON, clean it
+        scanned_code = data.get('code', '').strip().upper()
     except json.JSONDecodeError:
         return JsonResponse({'status': 'error', 'message': 'Invalid JSON.'}, status=400)
 
     if not scanned_code:
         return JsonResponse({'status': 'error', 'message': 'No ticket code provided.'}, status=400)
 
-    # Now use the existing logic from scan_ticket_code, but enhanced
     try:
         ticket = Ticket.objects.get(unique_code=scanned_code)
     except Ticket.DoesNotExist:
-        # Log the failed scan attempt
-        TicketScan.objects.create(
-            status='failed',
-            notes=f"Ticket with code {scanned_code} not found in database."
-        )
+        # Simply return an error if the ticket doesn't exist. Don't try to log it.
         return JsonResponse({"status": "error", "message": "❌ Invalid Ticket Code!"})
 
     with transaction.atomic():
-        # Try to mark the ticket as used. This is atomic to prevent race conditions.
-        updated_count = Ticket.objects.filter(
-            unique_code=scanned_code, is_used=False
-        ).update(is_used=True)
-
-        if updated_count == 0:
+        if ticket.is_used:
             # Ticket was already used
             TicketScan.objects.create(ticket=ticket, status="duplicate", scanned_by="Scanner")
             return JsonResponse({
                 "status": "error",
                 "message": "❌ Ticket already used!",
-                "ticket_details": { # Send back info for the scanner UI
+                "ticket_details": {
                     "full_name": ticket.full_name,
                     "ticket_type": ticket.get_ticket_type_display(),
                 }
             })
         else:
+            # Mark ticket as used
+            ticket.is_used = True
+            ticket.save()
+            
             # Ticket was successfully validated and marked used
             TicketScan.objects.create(ticket=ticket, status="success", scanned_by="Scanner")
             return JsonResponse({
@@ -843,9 +863,6 @@ def api_validate_ticket(request):
                     "ticket_type": ticket.get_ticket_type_display(),
                 }
             })
-
-
-
 
 def log_ticket_scan(request):
     if request.method == "POST":
@@ -865,5 +882,3 @@ def log_ticket_scan(request):
             "scan_id": log.id,
             "total_scans": total_scans
         })
-
-

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (5)" />
+    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (6)">
+      <change beforePath="$PROJECT_DIR$/.idea/KolaIncWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KolaIncWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KOLA_INC/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scanner/Scanner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scanner/Scanner.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +76,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -182,7 +190,8 @@
       <workItem from="1758469969082" duration="10507000" />
       <workItem from="1758623352502" duration="5071000" />
       <workItem from="1758703937011" duration="27108000" />
-      <workItem from="1758788390998" duration="1016000" />
+      <workItem from="1758788390998" duration="2625000" />
+      <workItem from="1758791109154" duration="5404000" />
     </task>
     <task id="LOCAL-00001" summary="push (1)">
       <option name="closed" value="true" />
@@ -264,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758788749523</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="push (6)">
+      <option name="closed" value="true" />
+      <created>1758789550135</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758789550135</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +293,7 @@
     <MESSAGE value="push (3)" />
     <MESSAGE value="push (4)" />
     <MESSAGE value="push (5)" />
-    <option name="LAST_COMMIT_MESSAGE" value="push (5)" />
+    <MESSAGE value="push (6)" />
+    <option name="LAST_COMMIT_MESSAGE" value="push (6)" />
   </component>
 </project>

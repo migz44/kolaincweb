@@ -49,10 +49,10 @@ urlpatterns = [
 
     # Scanner page
     path('Scanner', views.Scanner, name='Scanner-page'),
-    path('api/validate/', views.api_validate_ticket, name='api_validate_ticket'),
+    path('api/validate_ticket/', views.api_validate_ticket, name='api_validate_ticket'),
 
     # Mpesa callback
-    path('call-back/ggdudud/ggfsg', views.handleMpesaResponse, name='mpesa-call-back-endpoint'),
+    path('result-data/ggdudud/ggfsg', views.handleMpesaResponse, name='mpesa-call-back-endpoint'),
 
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django-sitemap'),
 

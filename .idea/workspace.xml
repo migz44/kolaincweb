@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (5)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (5)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +182,7 @@
       <workItem from="1758469969082" duration="10507000" />
       <workItem from="1758623352502" duration="5071000" />
       <workItem from="1758703937011" duration="27108000" />
-      <workItem from="1758788390998" duration="346000" />
+      <workItem from="1758788390998" duration="1016000" />
     </task>
     <task id="LOCAL-00001" summary="push (1)">
       <option name="closed" value="true" />
@@ -259,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758750503474</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="push (5)">
+      <option name="closed" value="true" />
+      <created>1758788749523</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1758788749523</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

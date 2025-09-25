@@ -55,6 +55,9 @@ urlpatterns = [
     path('call-back/ggdudud/ggfsg', views.handleMpesaResponse, name='mpesa-call-back-endpoint'),
 
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django-sitemap'),
+
+    path("sitemap.xml", TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml")),
+
     path('admin/', admin.site.urls),
 
 

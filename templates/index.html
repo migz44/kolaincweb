@@ -667,9 +667,9 @@ h4.text-uppercase {
                                 <div class="poster-container">
                                     <h3>Pop Night</h3>
                                     <div class="poster-placeholder">
-                                        <img src="{% static 'images/Kolacopia3.0EventPoster.jpg' %}" alt="Pop Night Poster" class="poster-image">
+                                        <img src="{% static 'images/Kolacopia3.0EventPoster.jpg' %}"  alt="Pop Night Poster" class="poster-image">
                                     </div>
-                                    <p class="mb-2">MASSHOUSE</p>
+                                    <p class="mb-2">Masshouse</p>
                                     <p>By KOLA</p>
                                 </div>
                             </td>
@@ -692,7 +692,7 @@ h4.text-uppercase {
                                         <img src="{% static 'images/ProjectKola (1).jpg' %}" alt="Rock & Roll Poster" class="poster-image">
                                     </div>
                                     <p class="mb-2">WINE TAILS</p>
-                                    <p>By KOLA</p>
+                                    <p>By WE WANNA PARTY</p>
                                 </div>
                             </td>
                         </tr>
@@ -714,6 +714,9 @@ h4.text-uppercase {
 .poster-container {
     text-align: center;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .poster-placeholder {
@@ -734,15 +737,88 @@ h4.text-uppercase {
     object-fit: cover;
 }
 
-/* Responsive design */
+/* Mobile-first responsive design */
 @media (max-width: 768px) {
+    .schedule-table {
+        display: block;
+        width: 100%;
+    }
+
+    .schedule-table thead {
+        display: block;
+        width: 100%;
+    }
+
+    .schedule-table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .schedule-table tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
     .event-poster-cell {
         width: 100%;
         display: block;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #444;
+        border-radius: 10px;
+        background-color: #2a2a2a;
+    }
+
+    .poster-container {
+        width: 100%;
+        max-width: 100%;
     }
 
     .poster-placeholder {
-        max-width: 300px;
+        max-width: 100%;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .poster-container h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .poster-container p {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+
+    /* Center align header for mobile */
+    .schedule-table th[colspan="3"] {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hide the event number headers on mobile */
+    .schedule-table thead tr:nth-child(2) {
+        display: none;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .schedule-table {
+        display: table;
+        width: 100%;
+    }
+
+    .schedule-table tr {
+        display: table-row;
+    }
+
+    .event-poster-cell {
+        display: table-cell;
     }
 }
 </style>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Payment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg">
+          <div class="card-body p-5">
+            <i class="bi bi-phone-fill text-primary" style="font-size: 4rem;"></i>
+            <h1 class="card-title mt-4">Check Your Phone!</h1>
+            <p class="lead text-muted">We have sent a payment request to your M-Pesa number.</p>
+            <p>Please enter your M-Pesa PIN to authorize the payment.</p>
+            <div class="spinner-border text-primary mt-4" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3">Waiting for payment confirmation...</p>
+            <hr>
+            <p class="small text-muted">If you don't see the M-Pesa prompt, please check your phone's notifications. If you made a mistake, you can go back and try again.</p>
+            <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-outline-secondary mt-2">Go Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

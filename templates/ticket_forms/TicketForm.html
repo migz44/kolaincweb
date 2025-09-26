@@ -38,7 +38,6 @@
     <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
 
 
-
 </head>
 
 <body class="homepage">
@@ -170,136 +169,156 @@
 
 <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
 
-<!-- Navbar -->
+<!--THIS IS THE TOP NAVBAR-->
 <div class="nav">
     <nav class="navbar fixed-top bg-body-tertiary">
         <div class="container-fluid">
+            <div class="logoIcons">
+                <a href="https://www.instagram.com/kola.incc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D">
+                    <img src="{% static 'images/instagram_icon.png' %}" alt="">
+                </a>
+                <a href="https://www.tiktok.com/@kola.incc?_t=ZM-8uNXugdMGqj&_r=1">
+                    <img src="{% static 'images/tiktok_icon.png' %}" alt="">
+                </a>
+                <a href="https://kolaclothing.myshopify.com/">
+                    <img src="{% static 'images/shopify_icon.png' %}" alt="">
+                </a>
+                <a href="">
+                    <img src="{% static 'images/pinterest_icon.png' %}" alt="">
+                </a>
+            </div>
+
             <div class="left">
-                 <span><img src="{% static 'images/KolaIncLogo.png' %}" alt=""></span>
+                <a href="{% url 'Home-page' %}"><span><img src="{% static 'images/NewKolaLogo.jpg' %}" alt=""></span></a>
             </div>
             <div class="right">
-                <ul>
+                <ul class="tourney-">
                     <li><a href="{% url 'Home-page' %}">Home</a></li>
-                    <li><a href="{% url 'TicketStop-page' %}">Ticket Stop</a></li>
+                    <li><a href="{% url 'TicketShop-page' %}">Ticket Shop</a></li>
                     <li><a href="{% url 'OurGallery-page' %}">Our Gallery</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="{% url 'ContactUs-page' %}">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </div>
+<!--THIS IS THE TOP NAVBAR-->
 
 <!-- Ticket Form -->
 <section class="ticket-section section-padding" id="section_5">
-  <div class="container">
-    <div class="row">
+    <div class="container">
+        <div class="row">
 
-      <div class="col-lg-12 text-center mb-4">
-        <h2 class="section-title">Buy Ticket</h2>
-        <p class="section-subtitle">Secure your seat today via M-Pesa</p>
-      </div>
-
-      <div class="col-lg-8 mx-auto">
-        <form class="custom-form ticket-form shadow-lg p-4 rounded"
-              action="{% url 'TicketForm-page' %}" method="post" role="form"
-              onsubmit="return validateTicketForm()">
-          {% csrf_token %}
-
-          <div class="ticket-form-body">
-            <!-- Name & Email -->
-            <div class="row g-3">
-              <div class="col-md-6">
-                <input type="text" name="ticket-form-name" id="ticket-form-name"
-                       class="form-control" placeholder="Full name" required>
-              </div>
-              <div class="col-md-6">
-                <input type="email" name="ticket-form-email" id="ticket-form-email"
-                       class="form-control" placeholder="Email address" required>
-              </div>
+            <div class="col-lg-12 text-center mb-4">
+                <h2 class="section-title">Buy Ticket</h2>
+                <p class="section-subtitle">Secure your seat today via M-Pesa</p>
             </div>
 
-            <!-- Phone -->
-            <div class="mt-3">
-              <input type="tel" class="form-control" name="ticket-form-phone" id="ticket-form-phone"
-                     placeholder="07XXXXXXXX or 2547XXXXXXXX" required>
+            <div class="col-lg-8 mx-auto">
+                <form class="custom-form ticket-form shadow-lg p-4 rounded"
+                      action="{% url 'TicketForm-page' %}" method="post" role="form"
+                      onsubmit="return validateTicketForm()">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+
+                    <div class="ticket-form-body">
+                        <!-- Name & Email -->
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="ticket-form-name" id="ticket-form-name"
+                                       class="form-control" placeholder="Full name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="ticket-form-email" id="ticket-form-email"
+                                       class="form-control" placeholder="Email address" required>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mt-3">
+                            <input type="tel" class="form-control" name="ticket-form-phone" id="ticket-form-phone"
+                                   placeholder="07XXXXXXXX or 2547XXXXXXXX" required>
+                        </div>
+
+                        <!-- Ticket Type -->
+                        <h6 class="mt-4 mb-2">Choose Ticket Type</h6>
+                        <div class="row g-3">
+                            <!-- NEW CODE (CORRECTED) -->
+                            <div class="col-md-6">
+                                <div class="form-check card p-2">
+                                    <input class="form-check-input ticket-option" type="radio" name="TicketForm"
+                                           id="earlyBird" value="earlyBird" required data-price="1200">
+                                    <label class="form-check-label" for="earlyBird">Early Bird <small>KES 1,200</small></label>
+                                </div>
+                                <div class="form-check card p-2 mt-2">
+                                    <input class="form-check-input ticket-option" type="radio" name="TicketForm"
+                                           id="standard" value="standard" data-price="2400">
+                                    <label class="form-check-label" for="standard">Standard <small>KES
+                                        2,400</small></label>
+                                </div>
+                                <div class="form-check card p-2 mt-2">
+                                    <input class="form-check-input ticket-option" type="radio" name="TicketForm"
+                                           id="gate" value="gate" data-price="1500">
+                                    <label class="form-check-label" for="gate">Gate <small>KES 1,500</small></label>
+                                </div>
+                            </div>
+                            <!-- Number of Tickets -->
+                            <div class="col-md-6">
+                                <label for="ticket-form-number" class="form-label">Number of Tickets</label>
+                                <select class="form-select" name="ticket-form-number" id="ticket-form-number">
+                                    <option value="1">1 Ticket</option>
+                                    <option value="2">2 Tickets</option>
+                                    <option value="3">3 Tickets</option>
+                                    <option value="4">4 Tickets</option>
+                                    <option value="5">5 Tickets</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Total Price -->
+                        <div class="alert alert-light mt-3 border">
+                            <strong>Total:</strong> <span id="totalPrice">KES 0</span>
+                        </div>
+
+                        <!-- Additional Request -->
+                        <textarea name="ticket-form-message" rows="3" class="form-control mt-3"
+                                  id="ticket-form-message" placeholder="Additional Request (optional)"></textarea>
+
+                        <!-- Payment Method -->
+                        <h6 class="mt-4 mb-2">Payment Method</h6>
+                        <div class="form-check card p-3 d-flex flex-row align-items-center gap-2">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="mpesa" value="mpesa"
+                                   required>
+                            <label class="form-check-label d-flex align-items-center" for="mpesa">
+                                <img src="{% static 'images/mpesa-logo.jpg' %}" alt="M-Pesa"
+                                     style="height:30px; margin-right:8px;">
+                                Pay with M-Pesa
+                            </label>
+                        </div>
+
+                        <!-- M-Pesa Number -->
+                        <div id="paymentDetails" class="mt-3">
+                            <label for="mpesaNumber" class="form-label">M-Pesa Phone Number</label>
+                            <input type="tel" class="form-control" id="mpesaNumber" name="mpesaNumber"
+                                   placeholder="07XXXXXXXX or 2547XXXXXXXX" required>
+                        </div>
+                        {#              ----------------HIDDEN INPUT#}
+                        <input type="hidden" name="event_id" value="{{ event.id }}">
+
+                        <!-- Submit Button -->
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-dark btn-lg">Buy Ticket</button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
-            <!-- Ticket Type -->
-            <h6 class="mt-4 mb-2">Choose Ticket Type</h6>
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="form-check card p-2">
-                  <input class="form-check-input ticket-option" type="radio" name="TicketForm"
-                         id="earlyBird" value="1200" required>
-                  <label class="form-check-label" for="earlyBird">Early Bird <small>KES 1,200</small></label>
-                </div>
-                <div class="form-check card p-2 mt-2">
-                  <input class="form-check-input ticket-option" type="radio" name="TicketForm"
-                         id="standard" value="2400">
-                  <label class="form-check-label" for="standard">Standard <small>KES 2,400</small></label>
-                </div>
-                <div class="form-check card p-2 mt-2">
-                  <input class="form-check-input ticket-option" type="radio" name="TicketForm"
-                         id="gate" value="1500">
-                  <label class="form-check-label" for="gate">Gate <small>KES 1,500</small></label>
-                </div>
-              </div>
-
-              <!-- Number of Tickets -->
-              <div class="col-md-6">
-                <label for="ticket-form-number" class="form-label">Number of Tickets</label>
-                <select class="form-select" name="ticket-form-number" id="ticket-form-number">
-                  <option value="1">1 Ticket</option>
-                  <option value="2">2 Tickets</option>
-                  <option value="3">3 Tickets</option>
-                  <option value="4">4 Tickets</option>
-                  <option value="5">5 Tickets</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Total Price -->
-            <div class="alert alert-light mt-3 border">
-              <strong>Total:</strong> <span id="totalPrice">KES 0</span>
-            </div>
-
-            <!-- Additional Request -->
-            <textarea name="ticket-form-message" rows="3" class="form-control mt-3"
-                      id="ticket-form-message" placeholder="Additional Request (optional)"></textarea>
-
-            <!-- Payment Method -->
-            <h6 class="mt-4 mb-2">Payment Method</h6>
-            <div class="form-check card p-3 d-flex flex-row align-items-center gap-2">
-              <input class="form-check-input" type="radio" name="paymentMethod" id="mpesa" value="mpesa" required>
-              <label class="form-check-label d-flex align-items-center" for="mpesa">
-                <img src="{% static 'images/mpesa-logo.jpg' %}" alt="M-Pesa" style="height:30px; margin-right:8px;">
-                Pay with M-Pesa
-              </label>
-            </div>
-
-            <!-- M-Pesa Number -->
-            <div id="paymentDetails" class="mt-3">
-              <label for="mpesaNumber" class="form-label">M-Pesa Phone Number</label>
-              <input type="tel" class="form-control" id="mpesaNumber" name="mpesaNumber"
-                     placeholder="07XXXXXXXX or 2547XXXXXXXX" required>
-            </div>
-{#              ----------------HIDDEN INPUT#}
-                <input type="hidden" name="event_id" value="{{ event.id }}">
-
-            <!-- Submit Button -->
-            <div class="d-grid mt-4">
-              <button type="submit" class="btn btn-dark btn-lg">Buy Ticket</button>
-            </div>
-          </div>
-        </form>
-      </div>
-
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Scripts -->
+
 <script>
 function validatePhone(number) {
   const phonePattern = /^(?:07\d{8}|2547\d{8})$/;
@@ -316,6 +335,12 @@ function normalizePhone(number) {
 function validateTicketForm() {
   const phone = document.getElementById('ticket-form-phone').value.trim();
   const mpesaPhone = document.getElementById('mpesaNumber').value.trim();
+  const ticketType = document.querySelector('input[name="TicketForm"]:checked');
+
+  if (!ticketType) {
+    alert("Please select a ticket type.");
+    return false;
+  }
 
   if (!validatePhone(phone)) {
     alert("Invalid phone number. Use 07XXXXXXXX or 2547XXXXXXXX.");
@@ -338,15 +363,22 @@ function updateTotal() {
   let total = 0;
 
   if (ticketType) {
-    total = ticketType.value * ticketCount;
+    const price = parseInt(ticketType.getAttribute('data-price'));
+    total = price * ticketCount;
   }
   document.getElementById('totalPrice').innerText = "KES " + total.toLocaleString();
 }
+
+// Add event listeners
 document.querySelectorAll('.ticket-option').forEach(option => {
   option.addEventListener('change', updateTotal);
 });
 document.getElementById('ticket-form-number').addEventListener('change', updateTotal);
-</script>
 
+// Initialize total on page load
+document.addEventListener('DOMContentLoaded', function() {
+  updateTotal();
+});
+</script>
 </body>
 </html>

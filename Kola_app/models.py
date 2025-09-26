@@ -151,7 +151,7 @@ class TicketScan(models.Model):
 
 # ----------------- Payment Model -----------------
 class Payment(models.Model):
-    merchardId = models.CharField(unique=True, max_length=191)
+    merchantId = models.CharField(unique=True, max_length=191)
     checkoutId = models.CharField(unique=True, max_length=191)
     phone = models.CharField(max_length=20)
     isSuccessful = models.BooleanField(default=False)

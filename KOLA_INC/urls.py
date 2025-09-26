@@ -19,14 +19,10 @@ urlpatterns = [
     )),
     path('', views.index, name='Home-page'),
 
-    path('TicketStop', views.TicketStop, name='TicketStop-page'),
+    path('TicketShop', views.TicketShop, name='TicketShop-page'),
     path('OurGallery', views.OurGallery, name='OurGallery-page'),
     path('ShopMen', views.ShopMen, name='ShopMen-page'),
     path('TicketForm', views.TicketForm, name='TicketForm-page'),
-    path('TicketForm2', views.TicketForm2, name='TicketForm2-page'),
-    path('TicketForm3', views.TicketForm3, name='TicketForm3-page'),
-    path('TicketForm4', views.TicketForm4, name='TicketForm4-page'),
-    path('TicketForm5', views.TicketForm5, name='TicketForm5-page'),
     path('ShopWomen', views.ShopWomen, name='ShopWomen-page'),
     path('AllTickets', views.AllTickets, name='AllTickets-page'),
     path('Kolacopia', views.Kolacopia, name='Kolacopia-page'),
@@ -36,7 +32,8 @@ urlpatterns = [
     path('ContactUs', views.ContactUs, name='ContactUs-page'),
     path('test', views.test, name='test-page'),
 
-    # Ticket success (UUID)
+    # Payment and Ticket Status
+    path('payment-pending/', views.payment_pending, name='payment_pending'),
     path('ticket/success/<uuid:ticket_id>/', views.ticket_success, name='ticket-success'),
 
     # User-facing verification (GET - Safe, doesn't change state)

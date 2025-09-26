@@ -49,6 +49,17 @@ class Event(models.Model):
     def get_absolute_url(self):
         return reverse('event-detail', kwargs={'slug': self.slug})
 
+# ----------------- Payment Model -----------------
+class Payment(models.Model):
+    merchantId = models.CharField(unique=True, max_length=191)
+    checkoutId = models.CharField(unique=True, max_length=191)
+    phone = models.CharField(max_length=20)
+    isSuccessful = models.BooleanField(default=False)
+    ResultDesc = models.CharField(max_length=191, null=True)
+    MpesaReceiptNumber = models.CharField(unique=True, max_length=191, null=True)
+    amount = models.IntegerField(default=0)
+    TransactionDate = models.DateTimeField(auto_now_add=True, null=True)
+
 # ----------------- Ticket Model -----------------
 class Ticket(models.Model):
     TICKET_CHOICES = [
@@ -60,6 +71,11 @@ class Ticket(models.Model):
         ('mpesa', 'M-Pesa'),
         ('card', 'Credit Card'),
         ('cash', 'Cash'),
+    ]
+    STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('active', 'Active'),
+        ('cancelled', 'Cancelled'),
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -77,14 +93,17 @@ class Ticket(models.Model):
     qr_code = models.ImageField(upload_to='qrcodes/', blank=True)
     unique_code = models.CharField(max_length=12, unique=True, blank=True)
     is_used = models.BooleanField(default=False)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
 
-    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='tickets')
+    event = models.ForeignKey(Event, on_delete=models.SET_NULL, related_name='tickets', null=True, blank=True)
+    payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, related_name='tickets', null=True, blank=True)
 
     class Meta:
         ordering = ['-created_at']
         indexes = [
             models.Index(fields=['unique_code']),
             models.Index(fields=['is_used']),
+            models.Index(fields=['status']),
         ]
 
     def clean(self):
@@ -117,7 +136,7 @@ class Ticket(models.Model):
             return False
 
     def is_valid_for_scan(self):
-        return not self.is_used
+        return self.status == 'active' and not self.is_used
 
     def __str__(self):
         return f"{self.full_name} - {self.ticket_type} ({self.unique_code})"
@@ -149,16 +168,18 @@ class TicketScan(models.Model):
             self.scanned_by = self.request_user.username
         super().save(*args, **kwargs)
 
-# ----------------- Payment Model -----------------
-class Payment(models.Model):
-    merchantId = models.CharField(unique=True, max_length=191)
-    checkoutId = models.CharField(unique=True, max_length=191)
-    phone = models.CharField(max_length=20)
-    isSuccessful = models.BooleanField(default=False)
-    ResultDesc = models.CharField(max_length=191, null=True)
-    MpesaReceiptNumber = models.CharField(unique=True, max_length=191, null=True)
-    amount = models.IntegerField(default=0)
-    TransactionDate = models.DateTimeField(auto_now_add=True, null=True)
+# ----------------- Contact Submission Model -----------------
+class ContactSubmission(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Message from {self.name} ({self.email}) on {self.created_at.strftime('%Y-%m-%d')}"
+
+    class Meta:
+        ordering = ['-created_at']
 
 # ----------------- TicketScanLog Model -----------------
 class TicketScanLog(models.Model):

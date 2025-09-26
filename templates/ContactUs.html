@@ -623,9 +623,15 @@
                 <div class="col-lg-6">
                     <div class="section-heading">
                         <h2>Say Hello. Don't Be Shy!</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <span>Details to details is what makes Kola different from the other brands.</span>
                     </div>
+                    {% if success %}
+                        <div class="alert alert-success" role="alert">
+                            Thank you for your message! We'll get back to you soon.
+                        </div>
+                    {% endif %}
                     <form id="contact" action="" method="post">
+                        {% csrf_token %}
                         <div class="row">
                           <div class="col-lg-6">
                             <fieldset>

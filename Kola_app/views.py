@@ -21,7 +21,7 @@ from django.views.decorators.http import require_http_methods
 from django_daraja.mpesa.core import MpesaClient
 from rest_framework.decorators import api_view
 
-from .models import Ticket, TicketScan, Payment, Event
+from .models import Ticket, TicketScan, Payment, Event, ContactSubmission
 
 logger = logging.getLogger(__name__)
 
@@ -57,6 +57,19 @@ def Kolacopia3(request):
     return render(request, 'events/Kolacopia3.html')
 
 def ContactUs(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        ContactSubmission.objects.create(
+            name=name,
+            email=email,
+            message=message
+        )
+        
+        return render(request, 'ContactUs.html', {'success': True})
+
     return render(request, 'ContactUs.html')
 
 def test(request):

@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/ticket_forms/payment_pending.html" afterDir="false" />
+    <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (8) 26/09">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KOLA_INC/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kola_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ContactUs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/OurGallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/OurGallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events/AllTickets.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/AllTickets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events/Kolacopia.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/Kolacopia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events/Kolacopia2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/Kolacopia2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events/Kolacopia3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/Kolacopia3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events/ProjectKola.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/ProjectKola.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events/TicketStop.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events/TicketShop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/TicketForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/TicketForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ticket_forms/ticket_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ticket_forms/ticket_success.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +188,7 @@
       <workItem from="1758791109154" duration="10717000" />
       <workItem from="1758806138359" duration="10855000" />
       <workItem from="1758897658761" duration="336000" />
-      <workItem from="1758898021710" duration="539000" />
+      <workItem from="1758898021710" duration="1933000" />
     </task>
     <task id="LOCAL-00001" summary="push (1)">
       <option name="closed" value="true" />
@@ -302,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758796729116</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="push (8) 26/09">
+      <option name="closed" value="true" />
+      <created>1758898609416</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1758898609416</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +308,7 @@
     <MESSAGE value="push (5)" />
     <MESSAGE value="push (6)" />
     <MESSAGE value="push (7) TICKET SCANNER SAVED" />
-    <option name="LAST_COMMIT_MESSAGE" value="push (7) TICKET SCANNER SAVED" />
+    <MESSAGE value="push (8) 26/09" />
+    <option name="LAST_COMMIT_MESSAGE" value="push (8) 26/09" />
   </component>
 </project>

@@ -21,19 +21,38 @@ from django.views.decorators.http import require_http_methods
 from django_daraja.mpesa.core import MpesaClient
 from rest_framework.decorators import api_view
 
-from .models import Ticket, TicketScan, Payment, Event, ContactSubmission
+from .models import Ticket, TicketScan, Payment, Event, ContactSubmission, GalleryImage, EventSchedule
 
 logger = logging.getLogger(__name__)
 
 
 def index(request):
-    return render(request, 'index.html')
+    # Get active event schedules for the schedule table
+    event_schedules = EventSchedule.objects.filter(is_active=True).order_by('-display_order', '-event_date')
+
+    # GET EVENTS FOR CATALOGUE CAROUSEL
+    catalogue_events = EventSchedule.objects.filter(
+        show_in_catalogue=True,
+        is_active=True
+    ).order_by('-catalogue_order', '-event_date')
+
+    context = {
+        'event_schedules': event_schedules,
+        'catalogue_events': catalogue_events  # ADD THIS
+    }
+    return render(request, 'index.html', context)
 
 def TicketShop(request):
     return render(request, 'events/TicketShop.html')
 
+
 def OurGallery(request):
-    return render(request, 'OurGallery.html')
+    gallery_images = GalleryImage.objects.filter(is_active=True).order_by('-upload_date')
+
+    context = {
+        'gallery_images': gallery_images
+    }
+    return render(request, 'OurGallery.html', context)
 
 def ShopMen(request):
     return render(request, 'merchandise/ShopMen.html')

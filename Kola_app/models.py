@@ -1,12 +1,15 @@
-from django.db import models
-from django.core.exceptions import ValidationError
-from django.utils import timezone
-from django.urls import reverse
-from django.utils.text import slugify
-import uuid
+import re
 import secrets
 import string
-import re
+import uuid
+from asyncio import Event
+
+from django.core.exceptions import ValidationError
+from django.db import models
+from django.utils import timezone
+from django.core.exceptions import ValidationError
+from PIL import Image
+import os
 
 # ----------------- Validators -----------------
 def validate_kenyan_phone_number(value):
@@ -23,31 +26,6 @@ def make_unique_code(length: int = 8):
     return ''.join(secrets.choice(alphabet) for _ in range(length))
 
 # ----------------- Event Model -----------------
-class Event(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=191, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)  # SEO-friendly URL
-    description = models.TextField(blank=True)
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
-    location = models.CharField(max_length=191, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ['start_date']
-
-    def __str__(self):
-        return self.name
-
-    # Auto-generate slug from name
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
-
-    # Sitemap compatibility
-    def get_absolute_url(self):
-        return reverse('event-detail', kwargs={'slug': self.slug})
 
 # ----------------- Payment Model -----------------
 class Payment(models.Model):
@@ -95,7 +73,6 @@ class Ticket(models.Model):
     is_used = models.BooleanField(default=False)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
 
-    event = models.ForeignKey(Event, on_delete=models.SET_NULL, related_name='tickets', null=True, blank=True)
     payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, related_name='tickets', null=True, blank=True)
 
     class Meta:
@@ -194,3 +171,129 @@ class TicketScanLog(models.Model):
 
     def __str__(self):
         return f"{self.ticket_id} - {self.status}"
+
+
+class GalleryImage(models.Model):
+    # Required fields
+    image = models.ImageField(upload_to='gallery/')
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True, null=True)
+
+    # Optional fields for better organization
+    upload_date = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
+
+    # You can add more fields like category, tags, etc.
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['-upload_date']  # Newest images first
+
+
+
+def validate_event_poster_dimensions(image):
+    """Validate that event poster has exact dimensions 3328x4160 pixels"""
+    # Open the image to check dimensions
+    img = Image.open(image)
+    width, height = img.size
+
+    # Check if dimensions match exactly
+    if width != 3328 or height != 4160:
+        raise ValidationError(
+            f'Event poster must be exactly 3328×4160 pixels. Your image is {width}×{height} pixels. '
+            f'Please resize your image to the required dimensions before uploading.'
+        )
+
+
+def validate_event_poster_dimensions(image):
+    """Validate that event poster has exact dimensions 3328x4160 pixels"""
+    # Open the image to check dimensions
+    img = Image.open(image)
+    width, height = img.size
+
+    # Check if dimensions match exactly
+    if width != 3328 or height != 4160:
+        raise ValidationError(
+            f'Event poster must be exactly 3328×4160 pixels. Your image is {width}×{height} pixels. '
+            f'Please resize your image to the required dimensions before uploading.'
+        )
+
+
+class EventSchedule(models.Model):
+    EVENT_NUMBER_CHOICES = [
+        ('Event 1', 'Event 1'),
+        ('Event 2', 'Event 2'),
+        ('Event 3', 'Event 3'),
+        ('Event 4', 'Event 4'),
+        ('Event 5', 'Event 5'),
+    ]
+
+    MONTH_CHOICES = [
+        ('January', 'January'),
+        ('February', 'February'),
+        ('March', 'March'),
+        ('April', 'April'),
+        ('May', 'May'),
+        ('June', 'June'),
+        ('July', 'July'),
+        ('August', 'August'),
+        ('September', 'September'),
+        ('October', 'October'),
+        ('November', 'November'),
+        ('December', 'December'),
+    ]
+
+    # Required fields
+    event_name = models.CharField(max_length=200)
+    event_number = models.CharField(max_length=10, choices=EVENT_NUMBER_CHOICES)
+    event_month = models.CharField(max_length=20, choices=MONTH_CHOICES)
+    event_poster = models.ImageField(
+        upload_to='events/posters/',
+        validators=[validate_event_poster_dimensions]
+    )
+    event_location = models.CharField(max_length=200)
+    event_host = models.CharField(max_length=100, default='By Kola')
+
+    # Date field for proper sorting
+    event_date = models.DateField(help_text="Actual date of the event")
+
+    # Catalogue fields - ADD THESE
+    show_in_catalogue = models.BooleanField(
+        default=False,
+        help_text="Show this event in the catalogue carousel"
+    )
+    catalogue_order = models.IntegerField(
+        default=0,
+        help_text="Higher numbers appear first in catalogue"
+    )
+    catalogue_link = models.CharField(
+        max_length=200,
+        blank=True,
+        help_text="Optional: Custom URL for this event in catalogue"
+    )
+
+    # Management fields
+    is_active = models.BooleanField(default=True)
+    display_order = models.IntegerField(
+        default=0,
+        help_text="Higher number appears first (optional)"
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.event_number} - {self.event_name} ({self.event_month})"
+
+    def clean(self):
+        """Additional validation"""
+        super().clean()
+        if self.event_poster:
+            # Ensure the image is re-validated on save
+            validate_event_poster_dimensions(self.event_poster)
+
+    class Meta:
+        ordering = ['-display_order', '-event_date']
+        verbose_name = 'Event Schedule'
+        verbose_name_plural = 'Event Schedules'

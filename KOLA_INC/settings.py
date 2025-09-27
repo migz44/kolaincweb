@@ -181,9 +181,11 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR / 'media'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # settings.py
 
@@ -243,4 +245,4 @@ MPESA_INITIATOR_SECURITY_CREDENTIAL = 'initiator_security_credential'
 # Redirect users to login page if they try to access a protected page
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/admin-dashboard/'  # Or wherever your dashboard is
-LOGOUT_REDIRECT_URL = '/login/'  # Where users go after logging out
+LOGOUT_REDIRECT_URL = '/admin/login/'  # Where users go after logging out

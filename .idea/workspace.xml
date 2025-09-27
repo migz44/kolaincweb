@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d60e92c6-5683-4341-8206-d75615fe2c2e" name="Changes" comment="push (8) 26/09">
+      <change afterPath="$PROJECT_DIR$/Kola_app/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kola_app/templatetags/custom_filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KOLA_INC/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/KOLA_INC/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kola_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kola_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ContactUs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/OurGallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/OurGallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -191,7 +198,8 @@
       <workItem from="1758806138359" duration="10855000" />
       <workItem from="1758897658761" duration="336000" />
       <workItem from="1758898021710" duration="5360000" />
-      <workItem from="1758922796224" duration="2358000" />
+      <workItem from="1758922796224" duration="2551000" />
+      <workItem from="1758966580586" duration="11437000" />
     </task>
     <task id="LOCAL-00001" summary="push (1)">
       <option name="closed" value="true" />
@@ -313,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758903800827</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="push (8) 26/09">
+      <option name="closed" value="true" />
+      <created>1758925198126</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1758925198126</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

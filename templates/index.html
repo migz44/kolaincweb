@@ -1,3 +1,4 @@
+{% load custom_filters %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -328,72 +329,29 @@
             <a href="{% url 'AllTickets-page' %}" class="btn-link">View All Events</a>
         </div>
 
+        {% if catalogue_events %}
         <div class="swiper product-swiper open-up" data-aos="zoom-out">
             <div class="swiper-wrapper d-flex">
-                <!-- Event cards remain the same -->
+                <!-- Dynamic Event Cards -->
+                {% for event in catalogue_events %}
                 <div class="swiper-slide">
                     <div class="product-item image-zoom-effect link-effect">
                         <div class="image-holder position-relative">
-                            <a href="{% url 'Kolacopia-page' %}">
-                                <img src="{% static 'images/Kolacopia.jpg' %}" alt="KOLACOPIA"
+                            <a href="{% if event.catalogue_link %}{{ event.catalogue_link }}{% else %}{% endif %}">
+                                <img src="{{ event.event_poster.url }}" alt="{{ event.event_name }}"
                                      class="product-image img-fluid">
                             </a>
                             <div class="product-content">
                                 <h5 class="element-title text-uppercase fs-5">
-                                    <a href="{% url 'Kolacopia-page' %}">KOLACOPIA</a>
+                                    <a href="{% if event.catalogue_link %}{{ event.catalogue_link }}{% else %}#{% endif %}">
+                                        {{ event.event_name }}
+                                    </a>
                                 </h5>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="swiper-slide">
-                    <div class="product-item image-zoom-effect link-effect">
-                        <div class="image-holder position-relative">
-                            <a href="#">
-                                <img src="{% static 'images/PosterKolacopia_2.0.jpg' %}" alt="KOLACOPIA 2.0"
-                                     class="product-image img-fluid">
-                            </a>
-                            <div class="product-content">
-                                <h5 class="text-uppercase fs-5">
-                                    <a href="#">KOLACOPIA 2.0</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="product-item image-zoom-effect link-effect">
-                        <div class="image-holder position-relative">
-                            <a href="#">
-                                <img src="{% static 'images/ProjectKola (1).jpg' %}" alt="PROJECT KOLA"
-                                     class="product-image img-fluid">
-                            </a>
-                            <div class="product-content">
-                                <h5 class="text-uppercase fs-5">
-                                    <a href="#">PROJECT KOLA</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="product-item image-zoom-effect link-effect">
-                        <div class="image-holder position-relative">
-                            <a href="#">
-                                <img src="{% static 'images/Kolacopia3.0EventPoster.jpg' %}" alt="KOLA EVENT"
-                                     class="product-image img-fluid">
-                            </a>
-                            <div class="product-content">
-                                <h5 class="text-uppercase fs-5">
-                                    <a href="#">KOLACOPIA 3.0</a>
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="swiper-pagination"></div>
             <div class="icon-arrow icon-arrow-left">
@@ -407,6 +365,17 @@
                 </svg>
             </div>
         </div>
+        {% else %}
+        <!-- Empty State -->
+        <div class="text-center py-5">
+            <div class="empty-catalogue-message">
+                <i class="fas fa-calendar-star fa-4x mb-4" style="color: #666;"></i>
+                <h4 class="text-white mb-3">No Featured Events Yet</h4>
+                <p class="text-muted">Check back soon for amazing events!</p>
+                <a href="{% url 'AllTickets-page' %}" class="btn-link mt-3">View All Events</a>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </section>
 
@@ -515,6 +484,14 @@
 
 .product-content h5 a:hover {
     color: #e74c3c;
+}
+
+/* Empty State Styling */
+.empty-catalogue-message {
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 2px dashed #444;
 }
 
 /* Swiper Navigation */
@@ -649,53 +626,65 @@ h4.text-uppercase {
                 <div class="table-responsive">
                     <table class="schedule-table table table-dark">
                         <thead>
+                        {% if event_schedules %}
                         <tr>
                             <th colspan="3" class="text-center" style="font-size: 1.5rem; padding: 1rem;">
-                                OCTOBER
+                                {{ event_schedules.0.event_month|upper }}
                             </th>
                         </tr>
                         <tr style="background-color: #2a2a2a;">
-                            <th scope="col" style="background-color: #2a2a2a;">Event 1</th>
-                            <th scope="col" style="background-color: #2a2a2a;">Event 2</th>
-                            <th scope="col" style="background-color: #2a2a2a;">Event 3</th>
+                            {% for event in event_schedules %}
+                            <th scope="col" style="background-color: #2a2a2a;">{{ event.event_number }}</th>
+                            {% endfor %}
+                            {# Fill empty columns if less than 3 events #}
+                            {% for i in event_schedules|length|add:"0"|get_range:3 %}
+                            <th scope="col" style="background-color: #2a2a2a;">Event {{ forloop.counter|add:event_schedules|length }}</th>
+                            {% endfor %}
                         </tr>
                         </thead>
 
                         <tbody>
                         <tr>
+                            {% for event in event_schedules %}
                             <td class="event-poster-cell">
                                 <div class="poster-container">
-                                    <h3>Pop Night</h3>
+                                    <h3>{{ event.event_name }}</h3>
                                     <div class="poster-placeholder">
-                                        <img src="{% static 'images/Kolacopia3.0EventPoster.jpg' %}"  alt="Pop Night Poster" class="poster-image">
+                                        <img src="{{ event.event_poster.url }}" alt="{{ event.event_name }} Poster" class="poster-image">
                                     </div>
-                                    <p class="mb-2">Masshouse</p>
+                                    <p class="mb-2">{{ event.event_location }}</p>
+                                    <p>{{ event.event_host }}</p>
+                                    <p>{{ event.event_date|date:"jS M Y" }}</p>
+                                </div>
+                            </td>
+                            {% endfor %}
+
+                            {# Fill empty cells if less than 3 events #}
+                            {% for i in event_schedules|length|add:"0"|get_range:3 %}
+                            <td class="event-poster-cell">
+                                <div class="poster-container">
+                                    <h3>Coming Soon</h3>
+                                    <div class="poster-placeholder" style="background-color: #333; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-calendar-plus" style="font-size: 3rem; color: #666;"></i>
+                                    </div>
+                                    <p class="mb-2">Stay Tuned</p>
                                     <p>By KOLA</p>
+                                    <p>Coming Soon</p>
                                 </div>
                             </td>
-
-                            <td class="event-poster-cell">
-                                <div class="poster-container">
-                                    <h3>DJ Night</h3>
-                                    <div class="poster-placeholder">
-                                        <img src="{% static 'images/PosterKolacopia_2.0.jpg' %}" alt="DJ Night Poster" class="poster-image">
-                                    </div>
-                                    <p class="mb-2">WINE TAILS</p>
-                                    <p>By WE WANNA PARTY</p>
-                                </div>
-                            </td>
-
-                            <td class="event-poster-cell">
-                                <div class="poster-container">
-                                    <h3>Rock & Roll</h3>
-                                    <div class="poster-placeholder">
-                                        <img src="{% static 'images/ProjectKola (1).jpg' %}" alt="Rock & Roll Poster" class="poster-image">
-                                    </div>
-                                    <p class="mb-2">WINE TAILS</p>
-                                    <p>By WE WANNA PARTY</p>
+                            {% endfor %}
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="3" class="text-center py-5">
+                                <div class="no-events-message">
+                                    <i class="fas fa-calendar-times fa-3x mb-3" style="color: #666;"></i>
+                                    <h4 class="text-white">No Events Scheduled Yet</h4>
+                                    <p class="text-muted">Check back soon for upcoming events!</p>
                                 </div>
                             </td>
                         </tr>
+                        {% endif %}
                         </tbody>
                     </table>
                 </div>
@@ -723,18 +712,22 @@ h4.text-uppercase {
     width: 100%;
     max-width: 400px;
     margin: 1rem auto;
-    background-color: #1a1a1a;
+    background-color: #1a1a2a;
     border: 2px solid #444;
     border-radius: 8px;
     overflow: hidden;
-    aspect-ratio: 3/4; /* Matches your 5400x7200 ratio (3:4) */
+    aspect-ratio: 4/5; /* Matches your 3328x4160 ratio (4:5) */
 }
 
 .poster-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
+}
+
+.no-events-message {
+    padding: 3rem 1rem;
 }
 
 /* Mobile-first responsive design */

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>💃𝙒𝙚𝙒𝙖𝙣𝙣𝙖𝙋𝙖𝙧𝙩𝙮🕺</title>
+    <title> Our Gallery-💃𝙒𝙚𝙒𝙖𝙣𝙣𝙖𝙋𝙖𝙧𝙩𝙮🕺</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,25 +93,22 @@
                 <p class="text-light">Moments from our past events</p>
             </div>
 
-            <!-- Masonry Grid -->
+            <!-- Dynamic Masonry Grid - Clean Version -->
             <div class="gallery-masonry">
-                <div class="gallery-item"><img src="{% static 'images/GLRY01.jpg' %}" alt="Gallery Image 1"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY02.jpg' %}" alt="Gallery Image 2"></div>
-                <div class="gallery-item tall"><img src="{% static 'images/GLRY03.jpg' %}" alt="Gallery Image 3"></div>
-                <div class="gallery-item wide"><img src="{% static 'images/GLRY04.jpg' %}" alt="Gallery Image 4"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY05.jpg' %}" alt="Gallery Image 5"></div>
-                <div class="gallery-item tall"><img src="{% static 'images/GLRY06.jpg' %}" alt="Gallery Image 6"></div>
-                <div class="gallery-item wide"><img src="{% static 'images/GLRY08.jpg' %}" alt="Gallery Image 8"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY09.jpg' %}" alt="Gallery Image 9"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY10.jpg' %}" alt="Gallery Image 10"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY11.jpg' %}" alt="Gallery Image 11"></div>
-                <div class="gallery-item tall"><img src="{% static 'images/GLRY12.jpg' %}" alt="Gallery Image 12"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY13.jpg' %}" alt="Gallery Image 13"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY14.jpg' %}" alt="Gallery Image 14"></div>
-                <div class="gallery-item wide"><img src="{% static 'images/GLRY15.jpg' %}" alt="Gallery Image 15"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY16.jpg' %}" alt="Gallery Image 16"></div>
-                <div class="gallery-item"><img src="{% static 'images/GLRY17.jpg' %}" alt="Gallery Image 17"></div>
-                <div class="gallery-item tall"><img src="{% static 'images/GLRY18.jpg' %}" alt="Gallery Image 18"></div>
+                {% for image in gallery_images %}
+                <div class="gallery-item {% if forloop.counter|divisibleby:3 %}tall{% elif forloop.counter|divisibleby:4 %}wide{% endif %}">
+                    <img src="{{ image.image.url }}" alt="{{ image.title|default:'Gallery Image' }}"
+                         data-bs-toggle="modal" data-bs-target="#imageModal"
+                         data-img="{{ image.image.url }}">
+                </div>
+                {% empty %}
+                <div class="col-12 text-center">
+                    <div class="alert alert-info">
+                        <h4>No images in the gallery yet</h4>
+                        <p>Check back soon for updates!</p>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
 
         </div>
@@ -119,9 +116,9 @@
 </section>
 <!-- THIS IS THE GALLERY SECTION END -->
 
-
 <!-- Masonry Styling -->
 <style>
+/* Clean Gallery Styles - Hover Zoom Only */
 .gallery-masonry {
   columns: 3; /* 3 columns by default */
   column-gap: 15px;
@@ -138,6 +135,7 @@
   height: auto;
   display: block;
   transition: transform 0.4s ease;
+  cursor: pointer;
 }
 .gallery-item:hover img {
   transform: scale(1.08);
@@ -157,10 +155,12 @@
 }
 @media (max-width: 576px) {
   .gallery-masonry { columns: 1; }
+  .gallery-item.tall img,
+  .gallery-item.wide img {
+    height: auto; /* Remove fixed heights on mobile */
+  }
 }
 </style>
-
-
 
 <!-- Fullscreen Modal -->
 <div class="modal fade" id="imageModal" tabindex="-1">
@@ -170,27 +170,6 @@
     </div>
   </div>
 </div>
-
-<!-- Styles for overlay -->
-<style>
-  .gallery-item img {
-    transition: transform 0.3s ease;
-  }
-  .gallery-item:hover img {
-    transform: scale(1.1);
-  }
-  .gallery-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .gallery-item:hover .gallery-overlay {
-    opacity: 1;
-  }
-</style>
 
 <script>
   const imageModal = document.getElementById('imageModal');
